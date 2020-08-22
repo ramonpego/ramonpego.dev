@@ -1,0 +1,33 @@
+// | FONTS |
+@font-face {
+	font-family: JetBrainsMono-ExtraBold;
+    src: url('../../../public/assets/fonts/JetBrainsMono-ExtraBold.woff') format('woff'),
+        url('../../../public/assets/fonts/JetBrainsMono-ExtraBold.woff') format('woff2');
+    font-style: normal;
+    font-variant: normal;
+    font-stretch: normal;
+    font-weight: 800;
+}
+$font_extra: JetBrainsMono-ExtraBold;
+
+@font-face {
+	font-family: JetBrainsMono-Bold;
+    src: url('../../../public/assets/fonts/JetBrainsMono-Bold.woff') format('woff'),
+        url('../../../public/assets/fonts/JetBrainsMono-Bold.woff2') format('woff2');
+    font-style: normal;
+    font-variant: normal;
+    font-stretch: normal;
+    font-weight: 700;
+}
+$font_bold: JetBrainsMono-Bold;
+
+@font-face {
+	font-family: JetBrainsMono-Regular;
+    src: url('../../../public/assets/fonts/JetBrainsMono-Regular.woff') format('woff'),
+        url('../../../public/assets/fonts/JetBrainsMono-Regular.woff2') format('woff2');
+    font-style: normal;
+    font-variant: normal;
+    font-stretch: normal;
+    font-weight: 400;
+}
+$font_regular: JetBrainsMono-Regular;

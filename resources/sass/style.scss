@@ -1,0 +1,12 @@
+// | IMPORTS |
+
+// | CONFIGURATIONS |
+@import "configuration/reset";
+@import "configuration/colors";
+@import "configuration/fonts";
+@import "configuration/mixins";
+
+// | COMPONENTS |
+@import "components/content";
+@import "components/footer";
+@import "components/mediaqueries";

@@ -1,0 +1,59 @@
+// | FOOTER |
+.footer {
+    width: 100%;
+    height: auto;
+    border-top: 1px solid $grey;
+    background-color: $white;
+    padding: 25px 0;
+
+    .div_footer {
+        width: 100%;
+        @include display;
+        @include align(center);
+        padding: 0 50px;
+    
+        .div_copy {
+            width: 100%;
+            @include justify(start);
+
+            span {
+                font-size: 14px;
+                font-style: italic;
+                letter-spacing: 2px;
+                color: $black;
+            }
+        }
+    
+        .div_social {
+            width: 100%;
+            @include display;
+            @include justify(end);
+
+            .nav {
+                .nav-item {
+                    margin: 0 5px;
+
+                    .nav-link {
+                        width: 40px;
+                        height: 40px;
+                        @include display;
+                        @include align(center);
+                        @include justify(center);
+                        padding: 5px;
+                        border-radius: 50%;
+                        background-color: $color;
+                        
+                        img {
+                            width: 17px;
+                            height: auto;
+                        }
+
+                        &:hover {
+                            background-color: $black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
