@@ -1,0 +1,64 @@
+// | AUTH |
+
+.auth_page,
+.auth_main,
+.auth_section {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.auth_section {
+    padding: 30px;
+    background-color: $color_pri;
+    background-image: url('../../../../public/assets/svgs/back.png'), -webkit-gradient(linear, left top, right top, from($color_pri), to($color_sec));
+    background-image: url('../../../../public/assets/svgs/back.png'), -o-linear-gradient(left, $color_pri, $color_sec);
+    background-image: url('../../../../public/assets/svgs/back.png'), linear-gradient(90deg, $color_pri, $color_sec);
+    background-size: cover;
+    background-origin: border-box;
+    background-clip: border-box;
+    background-position: center;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    @include display;
+    @include align(center);
+    @include justify(center);
+}
+
+.auth_card {
+    width: 500px;
+    height: 570px;
+    border: 1px solid $border;
+    border-radius: 12px;
+    background-color: $white;
+    padding: 20px;
+    @include display;
+    @include align(center);
+    @include justify(center);
+    @include flex_direction(collumn);
+    @include shadow(0 1px 6px 0 rgba(32, 33, 36, .1));
+
+    .div_title {
+        margin-bottom: 30px;
+        text-align: center;
+
+        .text_sm {
+            font-size: 15px;
+        }
+
+        .logo {
+            width: 90px;
+        }
+    }
+
+    .button {
+        min-width: 200px;
+    }
+}
+
+.copy {
+    position: fixed;
+    left: 50%;
+    bottom: 15px;
+    transform: translate(-50%);
+}

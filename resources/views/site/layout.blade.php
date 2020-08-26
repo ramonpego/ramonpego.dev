@@ -17,11 +17,10 @@
         <title> {{ env('APP_NAME') }} </title>
 
         <!-- | STYLES | -->
-
-        <link type="image/png" rel="shortcut icon" href="#">
+        {{-- <link type="image/png" rel="shortcut icon" href="# "> --}}
         <link type="text/css" rel="stylesheet" href="{{ asset('assets/icons/nucleo-outline.css') }}">
         <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-        <link type="text/css" rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/site.css') }}">
     </head>
 
     <body>
@@ -44,7 +43,7 @@
         <!-- | SCRIPTS | -->
         {{-- <script src="{{ asset('assets/js/jquery-3.5.1.min.js') }} "></script> --}}
         <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
-        <script src="{{ asset('js/script.js') }}"></script>
+        <script src="{{ asset('js/site.js') }}"></script>
     </body>
 
 </html>

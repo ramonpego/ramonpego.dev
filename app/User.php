@@ -7,8 +7,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
-{
+class User extends Authenticatable {
     use Notifiable;
 
     /**
@@ -43,7 +42,7 @@ class User extends Authenticatable
      * Return all posts from the user
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function posts(){
+    public function posts() {
         return $this->hasMany(Post::class);
     }
 }

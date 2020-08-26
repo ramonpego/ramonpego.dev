@@ -1,0 +1,230 @@
+// | DATATABLE |
+.datatable {
+    width: 100%;
+    border-radius: 14px;
+    border: 1px solid $border;
+    padding: 10px;
+    margin: 5px;
+    display: block;
+
+    // HEADER (FILTROS / EXPORT)
+    .datatable_header {
+        padding: 20px 5px;
+        background-color: $white;
+        @include display;
+        @include align(center);
+        @include justify(between);
+        @include flex_wrap(wrap);
+
+        .datatable_filter {
+            @include display;
+            @include align(center);
+            @include justify(center);
+            @include flex_wrap(wrap);
+
+            .datatable_filter_items {
+                margin: 5px 20px;
+                @include display;
+                @include align(center);
+                @include justify(center);
+                @include flex_wrap(wrap);
+
+                label {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    // BODY (TABLE)
+    // (>) Significa que o style será aplicado quando o elemento após o seletor for filho direto do elemento antes do seletor.
+    > .datatable_table {
+        table-layout: auto;
+        width: 100%;
+        background-color: $white;
+        border-collapse: collapse;
+        overflow: hidden;
+        display: block;
+        overflow-x: auto;
+
+        // Thead & Tbody
+        > .datatable_head,
+        > .datatable_body {
+            // visibility: hidden;
+            display: block;
+
+            // TR
+            .datatable_row {
+                width: 100%;
+                border-bottom: 1px solid $border;
+                display: table;
+
+                //TH & TD
+                .datatable_item {
+                    font-size: 16px;
+                    text-align: center;
+                    vertical-align: middle;
+                    padding: 1rem 1rem;
+
+                    > span {
+                        width: 112px;
+
+                        font-size: 15px;
+                        font-weight: 500;
+                        text-align: center;
+                        text-overflow: ellipsis;
+                        display: block;
+                        overflow: hidden;
+                        color: $black;
+                        margin: 0;
+                        margin-left: auto;
+                        margin-right: auto;
+
+                        > i {
+                            display: inline-block;
+                            position: relative;
+                            right: -10px;
+                            line-height: 0;
+                            vertical-align: middle;
+                            font-size: 1.1rem;
+                            color: #3699FF;
+                        }
+
+                        &.datatable_button {
+                            @include display;
+                            @include align(center);
+                            @include justify(center);
+                            @include flex_wrap(wrap);
+                        }
+
+                        .datatable_checkbox {
+                            label::before,
+                            label::after {
+                                cursor: pointer;
+                                width: 25px;
+                                height: 25px;
+                                border: none;
+                                border-radius: 7px;
+                                background-color: $grey;
+                                outline: 0;
+                                box-shadow: none;
+                            }
+                        }
+                    }
+
+                    // checkbox
+                    &.datatable_item_check {
+                        > span {
+                            width: 20px;
+                            overflow: visible;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Thead
+        > .datatable_head {
+            border-top: 1px solid $border;
+
+            // TR
+            .datatable_row {
+                // Th
+                .datatable_item {
+                    text-align: center !important;
+                    border-right: 1px solid $border;
+
+                    &:last-child {
+                        border-right: none;
+                    }
+
+                    > span {
+                        font-weight: 600;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+
+    // FOOTER (PAGINATION & REGISTERS)
+    > .datatable_footer {
+        margin: 0px;
+        padding: 25px 10px;
+        background-color: $white;
+        @include display;
+        @include justify(between);
+        @include flex_wrap(wrap);
+
+        // Paginação
+        > .datatable_footer_nav {
+            margin: 10px 0 0 0;
+            padding: 0;
+            @include display;
+            @include align(center);
+
+            > li {
+                display: inline-block;
+                padding: 0;
+
+                > .datatable_footer_link {
+                    min-width: 30px;
+                    height: 30px;
+                    cursor: pointer;
+                    @include display;
+                    @include align(center);
+                    @include justify(center);
+                    font-size: 13px;
+                    font-weight: 500;
+                    color: $black;
+                    border-radius: 0.42rem;
+                    background-color: $snow;
+
+                    > i {
+                        font-size: 12px;
+                        text-align: center;
+                        color: $black;
+                    }
+
+                    &.datatable_footer_link_disabled {
+                        cursor: default;
+                        opacity: 0.6;
+                    }
+
+                    &.datatable_footer_link_active {
+                        color: $black;
+                        background-color: $color_pri;
+                    }
+
+                    // Hover efect (menos nos com a classe no not)
+                    &:hover:not(.datatable_footer_link_disabled) {
+                        opacity: 1;
+                        background-color: $color_sec;
+                    }
+                }
+            }
+        }
+
+        // Registros
+        > .datatable_footer_info {
+            @include display;
+            @include align(center);
+            margin-top: 10px;
+
+            .datatable_footer_size {
+                width: 60px;
+                padding: 5px;
+                margin-right: 10px;
+
+                option {
+                    color: $black;
+                }
+            }
+
+            .datatable_footer_detail {
+                font-size: 12px;
+                color: $black;
+            }
+        }
+    }
+}

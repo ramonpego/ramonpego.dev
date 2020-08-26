@@ -1,0 +1,43 @@
+// | IMPORTS SASS |
+
+// | CONFIGURAÇÕES |
+@import "configuration/reset";
+@import "configuration/fonts";
+@import "configuration/variables";
+@import "configuration/mixins";
+
+// | COMPONENTS |
+@import "components/animations";
+@import "components/loader";
+@import "components/typography";
+@import "components/navs";
+@import "components/dropdowns";
+@import "components/links";
+@import "components/buttons";
+@import "components/cards";
+@import "components/forms";
+@import "components/images";
+@import "components/modals";
+@import "components/lists";
+@import "components/divs";
+@import "components/badge";
+@import "components/popover";
+@import "components/scroll";
+@import "components/utilities";
+@import "components/datatables";
+
+// @import "components2/tables";
+@import "components2/pagination";
+
+// | CONTENTS |
+@import "contents/error";
+@import "contents/auth";
+@import "contents/body";
+@import "contents/content";
+@import "contents/navbar";
+@import "contents/sidebar";
+@import "contents/section";
+@import "contents/footer";
+@import "contents/aside";
+
+@import "media_queries";

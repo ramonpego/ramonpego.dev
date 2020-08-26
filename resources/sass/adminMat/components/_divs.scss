@@ -1,0 +1,100 @@
+// | DIVS |
+
+.back_text {
+    padding: 10px 15px !important;
+    border: none;
+    border-radius: 12px;
+    background-color: $snow;
+
+    &:hover {
+        background-color: $color_rgba;
+    }
+
+    &.active {
+        background-color: $color_sec;
+
+        .text, .text_sm {
+            color: $white !important;
+        }
+    }
+}
+
+.back_icon {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 12px;
+    border: 1px solid $border;
+    background-color: transparent;
+    @include display;
+    @include align(center);
+    @include justify(center);
+    position: relative;
+
+    i {
+        font-size: 17px;
+        color: $black;
+    }
+
+    svg, img {
+        width: 16px;
+        height: auto;
+    }
+
+    svg path {
+        fill: $black;
+    }
+
+    &:hover {
+        background-color: $color_rgba;
+
+        i {
+            color: $color_sec;
+        }
+    }
+
+    .badge_notification {
+        position: absolute;
+        top: -2px;
+        right: 0;
+    }
+}
+
+.div_title {
+    margin-bottom: 20px;
+
+    .title {
+        font-size: 20px;
+        letter-spacing: 1.5px;
+        color: $black;
+    }
+
+    .text,
+    .text_sm,
+    .text_sm.text_sm_variant {
+        text-align: justify;
+    }
+}
+
+.div_content {
+    width: 100%;
+    height: auto;
+    padding: 0px 20px;
+}
+
+.bloco {
+    width: 100%;
+    height: auto;
+    border: 1px solid $border;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 15px;
+    @include display;
+    @include align(center);
+    @include flex_wrap(wrap);
+
+    &.bloco_collumn {
+        @include align(baseline);
+        @include flex_direction(collumn);
+    }
+}

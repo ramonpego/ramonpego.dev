@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: JetBrainsMono-ExtraBold;
-  src: url(/fonts/JetBrainsMono-ExtraBold.woff?8fb2b919c632aa14585e0b0df6ae618f) format("woff"), url(/fonts/JetBrainsMono-ExtraBold.woff?8fb2b919c632aa14585e0b0df6ae618f) format("woff2");
+  src: url(/fonts/JetBrainsMono-ExtraBold.woff?bd0cd45ba80883a87d122a5b23f92a18) format("woff"), url(/fonts/JetBrainsMono-ExtraBold.woff?bd0cd45ba80883a87d122a5b23f92a18) format("woff2");
   font-style: normal;
   font-variant: normal;
   font-stretch: normal;
@@ -19,7 +19,7 @@
 
 @font-face {
   font-family: JetBrainsMono-Bold;
-  src: url(/fonts/JetBrainsMono-Bold.woff?55c1134aa19a9745b9ec647d28d41532) format("woff"), url(/fonts/JetBrainsMono-Bold.woff2?c318a45b45be019ffdeb8c9ac6a41283) format("woff2");
+  src: url(/fonts/JetBrainsMono-Bold.woff?896f23850b33cd1df94eb955d4b60079) format("woff"), url(/fonts/JetBrainsMono-Bold.woff2?a492f7427b1561cc96ace88f5756d94e) format("woff2");
   font-style: normal;
   font-variant: normal;
   font-stretch: normal;
@@ -28,7 +28,7 @@
 
 @font-face {
   font-family: JetBrainsMono-Regular;
-  src: url(/fonts/JetBrainsMono-Regular.woff?d4ff51ff52d30f839d5be70c33bf872e) format("woff"), url(/fonts/JetBrainsMono-Regular.woff2?3eacd63796de4b39bc102dae7b143ca5) format("woff2");
+  src: url(/fonts/JetBrainsMono-Regular.woff?2fe9a2bdaa6daf61e770a2edb7252040) format("woff"), url(/fonts/JetBrainsMono-Regular.woff2?21ba2c11275a07ccf3890fbeab585525) format("woff2");
   font-style: normal;
   font-variant: normal;
   font-stretch: normal;

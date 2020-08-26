@@ -1,5 +1,4 @@
 <div>
-
     <section >
         <input type="search" wire:model="search" class="bg-blue-100 rounded-b-md" id="">
         @forelse($posts as $post)

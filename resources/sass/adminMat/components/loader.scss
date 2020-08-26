@@ -1,0 +1,20 @@
+// | LOADERS |
+
+.loader_content {
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    @include display;
+    @include align(center);
+    @include justify(center);
+    position: fixed;
+    z-index: 4000;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 6px solid $grey;
+    border-left-color: $color_sec;
+}

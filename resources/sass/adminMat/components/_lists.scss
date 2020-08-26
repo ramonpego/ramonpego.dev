@@ -1,0 +1,89 @@
+// | LISTS |
+
+// | LIST GROUP |
+.list-group {
+    border: 1px solid $border;
+    border-radius: 6px;
+
+    .list-group-item {
+        padding: 15px;
+        border-color: $snow;
+        @include display;
+        @include align(center);
+        @include justify(center);
+
+        .left {
+            flex: 1;
+            font-family: $font_regular;
+            font-size: 10px;
+
+            .back_icon {
+                width: 30px;
+                height: 30px;
+
+                i {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .right {
+            flex: 2;
+        }
+
+        &.active {
+            background-color: $snow;
+            @include gradient;
+
+            .left {
+                .back_icon {
+                    background-color: $white;
+                }
+            }
+        }
+    }
+}
+
+// | LIST NOTIFICATION |
+.list_notification {
+    padding: 30px;
+
+    .list-group-item {
+        position: relative;
+        border: none;
+        border-left: 1px solid $border;
+        padding: 30px 1.25rem;
+        @include display;
+        @include align(center);
+
+        .back_icon {
+            position: absolute;
+            left: 0;
+            transform: translateX(-50%);
+            background-color: $color_rgba;
+            @include shadow(0 1px 3px 0 rgba(32, 33, 36, 0.178));
+
+            i {
+                color: $color_sec;
+            }
+        }
+
+        .text_sm {
+            margin-left: 20px;
+            text-align: justify;
+        }
+
+        &.active, &:hover {
+            background-color: $snow;
+
+            .back_icon {
+                @include gradient;
+
+                i {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+

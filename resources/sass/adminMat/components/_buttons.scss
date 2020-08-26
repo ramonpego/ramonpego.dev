@@ -1,0 +1,403 @@
+// | BUTTONS |
+
+// | BUTTON PADRÃO |
+.button {
+    font-family: $font_light;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    text-align: center;
+    text-decoration: none;
+    color: $color_sec;
+    border-radius: 7px;
+    background-color: $color_rgba;
+    padding: 10px 20px;
+    margin: 5px;
+    @include display;
+    @include align(center);
+    @include justify(center);
+
+    i {
+        color: inherit;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    &:focus, &:hover {
+        outline: 0;
+        box-shadow: none;
+        text-decoration: none;
+        @include shadow(0 1px 3px 0 rgba(32, 33, 36, 0.178));
+        // color: $black;
+        // @include gradient;
+    }
+
+    &.full {
+        width: 100%;
+    }
+}
+
+// | BUTTONS SOLID |
+.button_solid_mat {
+    color: $black;
+    border: none;
+    background-color: $color_pri;
+}
+
+.button_solid_success {
+    color: $white;
+    border: none;
+    background-color: $color_sec;
+}
+
+.button_solid_primary {
+    color: $white;
+    border: none;
+    background-color: $blue;
+}
+
+.button_solid_warning {
+    color: $black;
+    border: none;
+    background-color: $yellow;
+}
+
+.button_solid_danger {
+    color: $white;
+    border: none;
+    background-color: $red;
+}
+
+.button_solid_clear {
+    color: $black;
+    border: none;
+    background-color: $grey;
+}
+
+// | BUTTONS OUTLINE |
+.button_outline_mat {
+    color: $black;
+    border: 2px solid $color_pri;
+    background-color: transparent;
+
+    &:focus, &:hover {
+        background-color: $color_pri;
+    }
+}
+
+.button_outline_success {
+    color: $color_sec;
+    border: 2px solid $color_sec;
+    background-color: transparent;
+
+    &:focus, &:hover {
+        color: $white;
+        background-color: $color_sec;
+    }
+}
+
+.button_outline_primary {
+    color: $blue;
+    border: 2px solid $blue;
+    background-color: transparent;
+
+    &:focus, &:hover {
+        color: $white;
+        background-color: $blue;
+    }
+}
+
+.button_outline_warning {
+    color: $yellow;
+    border: 2px solid $yellow;
+    background-color: transparent;
+
+    &:focus, &:hover {
+        color: $black;
+        background-color: $yellow;
+    }
+}
+
+.button_outline_danger {
+    color: $red;
+    border: 2px solid $red;
+    background-color: transparent;
+
+    &:focus, &:hover {
+        color: $white;
+        background-color: $red;
+    }
+}
+
+.button_outline_clear {
+    color: $black;
+    border: 2px solid $grey;
+    background-color: transparent;
+
+    &:focus, &:hover {
+        background-color: $grey;
+    }
+}
+
+// | BUTTON ICON PADRÃO |
+.button_icon {
+    width: 42px;
+    height: 42px;
+    margin: 5px;
+    border: none;
+    border-radius: 12px;
+    background-color: $color_rgba;
+    @include shadow(0 1px 3px 0 rgba(32, 33, 36, 0.178));
+    @include display;
+    @include align(center);
+    @include justify(center);
+    cursor: pointer;
+
+    i {
+        font-size: 18px;
+        color: $color_sec;
+    }
+
+    &:focus, &:hover {
+        outline: 0;
+        box-shadow: none;
+        text-decoration: none;
+        background-color: $color_rgba;
+
+        i {
+            color: $color_sec;
+        }
+    }
+
+    &.link_table {
+        width: 35px;
+        height: 35px;
+
+        i {
+            font-size: 14px;
+        }
+    }
+}
+
+// | BUTTONS ICONS SOLID |
+.button_icon_solid_mat {
+    background-color: $color_pri;
+
+    i {
+        color: $black;
+    }
+
+    &:hover {
+        background-color: $color_pri;
+
+        i {
+            color: $black;
+        }
+    }
+}
+
+.button_icon_solid_success {
+    background-color: $color_sec;
+
+    i {
+        color: $white;
+    }
+
+    &:hover {
+        background-color: $color_sec;
+
+        i {
+            color: $white;
+        }
+    }
+}
+
+.button_icon_solid_primary {
+    background-color: $blue;
+
+    i {
+        color: $white;
+    }
+
+    &:hover {
+        background-color: $blue;
+
+        i {
+            color: $white;
+        }
+    }
+}
+
+.button_icon_solid_warning {
+    background-color: $yellow;
+
+    i {
+        color: $black;
+    }
+
+    &:hover {
+        background-color: $yellow;
+
+        i {
+            color: $black;
+        }
+    }
+}
+
+.button_icon_solid_danger {
+    background-color: $red;
+
+    i {
+        color: $white;
+    }
+
+    &:hover {
+        background-color: $red;
+
+        i {
+            color: $white;
+        }
+    }
+}
+
+.button_icon_solid_clear {
+    background-color: $grey;
+
+    i {
+        color: $black;
+    }
+
+    &:hover {
+        background-color: $grey;
+
+        i {
+            color: $black;
+        }
+    }
+}
+
+// | BUTTONS ICONS OUTLINE |
+.button_icon_outline_mat {
+    background-color: $white;
+
+    i {
+        color: $color_pri;
+    }
+
+    &:hover {
+        background-color: $color_pri;
+
+        i {
+            color: $black;
+        }
+    }
+}
+
+.button_icon_outline_clear {
+    background-color: $white;
+
+    i {
+        color: $black;
+    }
+
+    &:hover {
+        background-color: $grey;
+
+        i {
+            color: $black;
+        }
+    }
+}
+
+.button_icon_outline_success {
+    background-color: $white;
+
+    i {
+        color: $color_sec;
+    }
+
+    &:hover {
+        background-color: $color_sec;
+
+        i {
+            color: $white;
+        }
+    }
+}
+
+.button_icon_outline_primary {
+    background-color: $white;
+
+    i {
+        color: $blue;
+    }
+
+    &:hover {
+        background-color: $blue;
+
+        i {
+            color: $white;
+        }
+    }
+}
+
+.button_icon_outline_warning {
+    background-color: $white;
+
+    i {
+        color: $yellow;
+    }
+
+    &:hover {
+        background-color: $yellow;
+
+        i {
+            color: $black;
+        }
+    }
+}
+
+.button_icon_outline_danger {
+    background-color: $white;
+
+    i {
+        color: $red;
+    }
+
+    &:hover {
+        background-color: $red;
+
+        i {
+            color: $white;
+        }
+    }
+}
+
+
+
+.button_dropdown {
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 2px;
+    border: none;
+    background-color: $color_pri;
+    text-decoration: none;
+
+    span {
+        font-family: $font_regular;
+        font-size: 13px;
+        letter-spacing: 2px;
+        color: $white;
+    }
+
+    i {
+        font-size: 13px;
+        color: $white;
+        margin-right: 10px;
+    }
+
+    &:hover {
+        text-decoration: none;
+        background-color: $color_sec;
+    }
+}

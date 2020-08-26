@@ -1,4 +1,6 @@
 {
-    "/js/script.js": "/js/script.js",
-    "/css/style.css": "/css/style.css"
+    "/js/adminMat.js": "/js/adminMat.js",
+    "/js/site.js": "/js/site.js",
+    "/css/site.css": "/css/site.css",
+    "/css/adminMat.css": "/css/adminMat.css"
 }

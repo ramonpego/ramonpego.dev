@@ -1,0 +1,52 @@
+// | FONTS |
+@font-face {
+    font-family: JetBrainsMono-ExtraBold;
+    src: url('../../../../public/assets/fonts/JetBrainsMono-ExtraBold.woff') format("woff"),
+        url('../../../../public/assets/fonts/JetBrainsMono-ExtraBold.woff2') format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    font-variant: normal;
+    font-variation-settings: normal;
+    font-feature-settings: normal;
+    unicode-range: U+0-10FFFF;
+}
+
+@font-face {
+    font-family: JetBrainsMono-Bold;
+    src: url('../../../../public/assets/fonts/JetBrainsMono-Bold.woff') format("woff"),
+    url('../../../../public/assets/fonts/JetBrainsMono-Bold.woff2') format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    font-variant: normal;
+    font-variation-settings: normal;
+    font-feature-settings: normal;
+    unicode-range: U+0-10FFFF;
+}
+
+@font-face {
+    font-family: JetBrainsMono-Regular;
+    src: url('../../../../public/assets/fonts/JetBrainsMono-Regular.woff') format("woff"),
+    url('../../../../public/assets/fonts/JetBrainsMono-Regular.woff2') format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    font-variant: normal;
+    font-variation-settings: normal;
+    font-feature-settings: normal;
+    unicode-range: U+0-10FFFF;
+}
+
+@font-face {
+    font-family: JetBrainsMono-Light;
+    src: url('../../../../public/assets/fonts/JetBrainsMono-Light.woff') format("woff"),
+    url('../../../../public/assets/fonts/JetBrainsMono-Light.woff2') format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    font-variant: normal;
+    font-variation-settings: normal;
+    font-feature-settings: normal;
+    unicode-range: U+0-10FFFF;
+}

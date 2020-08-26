@@ -1,0 +1,190 @@
+// | MEDIA QUERIES |
+@media(min-width: 800px) and (max-width: 975px) {
+    // REDUZ O NAVBAR-BRAND PRA FORMA SMALL
+    .navbar-brand {
+        width: 100px;
+
+        img {
+            width: 70px;
+        }
+    }
+}
+
+@media(min-width: 800px) {
+    // OCULTA O BOTÃO ACTION DO SIDEBAR
+    .navbar_user .nav-item #sidebar_action_mobile {
+        display: none;
+    }
+
+    // OCULTA O BOTÃO ACTION CLOSE DO SIDEBAR
+    .sidebar .aside_action {
+        display: none;
+    }
+
+    .navbar_user {
+        .toggle-asideNavbar {
+            display: none;
+        }
+    }
+}
+
+@media(max-width: 799px) {
+    // NAVBAR-BRAND É REDUZIDO PARA SMALL
+    .navbar-brand {
+        width: 150px;
+
+        img {
+            width: 80px;
+        }
+
+        // BOTÃO DE AÇÃO DO SIDEBAR É REMOVIDO
+        #sidebar_action {
+            display: none;
+        }
+    }
+
+    // NAVBAR_USER ALINHA A DIREITA
+    .navbar_user {
+        margin-left: auto;
+    }
+
+    // NAVBAR_OPC MOBILE
+    .navbar_opc {
+        display: none;
+    }
+
+    // MOVE OS ASIDE PARA O LADO ESQUERDO DA TELA
+    .aside {
+        left: 0;
+
+        // ALTERA A ANIMAÇÃO DA DIREITA PARA A ESQUERDA
+        &.fadeInRight {
+            @include animate($name: fadeInLeft, $duration: 0.8s, $timing: ease-in-out);
+        }
+
+        // MOVE OS ACTION CLOSE PAR AO LADO DIREITO DO ASIDE
+        .aside_body .aside_action {
+            right: 0;
+            left: auto;
+            transform: translateX(50%);
+        }
+    }
+
+    // REMOVE O SIDEBAR
+    .sidebar {
+        display: none;
+    }
+
+    // AUMENTA O MAIN POR COMPLETO (100%)
+    .main {
+        width: 100%;
+    }
+}
+
+@media(max-width: 768px) {
+    .section {
+        padding: 20px 10px;
+    }
+
+    .card_content .card_body {
+        padding: 20px 10px;
+    }
+}
+
+@media(max-width: 500px) {
+    .dataTables_wrapper {
+        padding: 20px;
+
+        // Itens acima da tabela
+        .dataTables_filter {
+            margin-bottom: 0;
+
+            label {
+                font-size: 10px;
+                color: $black;
+                order: 2;
+                // text-align: right !important;
+
+                select, input {
+                    border-radius: 22px;
+                    display: block !important;
+                    margin-bottom: 5px;
+                    order: 1;
+                }
+
+                input {
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        // Items Abaixo da tabela
+        .dataTables_info {
+            font-size: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: $black;
+        }
+
+        .dataTables_paginate {
+            @include display;
+            @include align(center);
+            @include justify(center);
+
+            .pagination {
+                @include display;
+                @include align(center);
+                @include justify(center);
+                @include flex_wrap(wrap);
+            }
+        }
+    }
+}
+
+@media(max-width: 425px) {
+    .section {
+        padding: 20px 0;
+    }
+
+    .card_content .card_body {
+        padding: 20px 5px;
+    }
+
+    .dataTables_wrapper {
+        padding: 20px 5px;
+    }
+
+    .navbar_user {
+        // INFORMAÇÕES DO USER SÃO REMOVIDAS
+        .avatar_infos {
+            display: none;
+        }
+    }
+}
+
+@media(max-width: 320px) {
+    .sidebar, .aside {
+        width: 280px !important;
+    }
+
+    .footer .div_footer {
+        @include flex_direction(collumn);
+
+        .div_copy, .div_social {
+            text-align: center;
+            @include justify(center);
+
+            .back_icon {
+                width: 30px;
+                height: 30px;
+
+                svg {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+
+        }
+    }
+}

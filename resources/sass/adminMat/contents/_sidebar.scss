@@ -1,0 +1,53 @@
+// | SIDEBAR |
+
+.sidebar {
+    z-index: 1;
+    position: relative;
+    width: 280px;
+    height: inherit;
+    overflow: hidden;
+    background-color: $white;
+    @include shadow(0 2px 8px 0 rgba(0, 0, 0, 0.11));
+
+    .link_action {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        transform: translateX(-50%);
+        z-index: 20;
+    }
+
+    .sidebar_content {
+        width: 100%;
+        height: inherit;
+        overflow: auto;
+        padding: 20px 10px;
+        @include display;
+        @include align(start);
+        @include flex_direction(collumn);
+    }
+}
+
+// | SMALL |
+.sidebar.small .sidebar_search .search_box {
+    display: none;
+}
+
+.sidebar_app {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 350px;
+    height: 100vh;
+    border: none;
+    background-color: $white;
+    animation-name: fadeInLeft;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}

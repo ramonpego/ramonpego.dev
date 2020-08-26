@@ -1,0 +1,64 @@
+// |  LINKS |
+
+a {
+    font-family: $font_regular;
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    color: $black;
+    text-decoration: none;
+    margin: 0 10px;
+
+    &:hover, &:focus {
+        color: $color_sec;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    // &:visited, &:active {
+    &.active {
+        color: $color_pri;
+        font-weight: 600;
+        text-decoration: none;
+    }
+}
+
+.link_action {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 12px;
+    background-color: $white;
+    @include shadow(0 1px 3px 0 rgba(32, 33, 36, 0.178));
+    @include display;
+    @include align(center);
+    @include justify(center);
+    cursor: pointer;
+    margin: 5px;
+
+    i {
+        font-size: 18px;
+        color: $black;
+    }
+
+    &:focus, &:hover {
+        outline: 0;
+        box-shadow: none;
+        text-decoration: none;
+        background-color: $color_rgba;
+
+        i {
+            color: $color_sec;
+        }
+    }
+
+    &.link_table {
+        width: 35px;
+        height: 35px;
+        margin-left: 5px;
+        margin-right: 5px;
+
+        i {
+            font-size: 14px;
+        }
+    }
+}

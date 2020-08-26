@@ -12,8 +12,12 @@ const tailwindcss = require('tailwindcss');
  |
  */
 
-mix.js('resources/js/script.js', 'public/js')
-    .sass('resources/sass/style.scss', 'public/css')
+mix.js('resources/js/site/site.js', 'public/js')
+    .sass('resources/sass/site/site.scss', 'public/css')
+
+    .js('resources/js/adminMat/adminMat.js', 'public/js')
+    .sass('resources/sass/adminMat/adminMat.scss', 'public/css')
+
     // .options({
     //     processCssUrls: false,
     //     postCss: [ tailwindcss('./tailwind.config.js') ],

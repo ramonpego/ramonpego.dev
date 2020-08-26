@@ -1,0 +1,32 @@
+// | BADGE |
+
+.badge {
+    padding: 10px;
+    color: $black;
+    border: 1px solid $border;
+    border-radius: 12px;
+    background-color: $color_pri;
+    margin: 5px;
+    // @include gradient;
+
+    &.badge_normal {
+        color: $white;
+        background-color: $blue;
+    }
+
+    &.badge_warning {
+        background-color: $yellow;
+    }
+
+    &.badge_danger {
+        color: $white;
+        background-color: $red;
+    }
+}
+
+.badge_notification {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $color_sec;
+}

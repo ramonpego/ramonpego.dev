@@ -86,10 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/script.js":
-/*!********************************!*\
-  !*** ./resources/js/script.js ***!
-  \********************************/
+/***/ "./resources/js/site/site.js":
+/*!***********************************!*\
+  !*** ./resources/js/site/site.js ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -111,10 +111,21 @@ function scrollTop(event) {
 
 /***/ }),
 
-/***/ "./resources/sass/style.scss":
-/*!***********************************!*\
-  !*** ./resources/sass/style.scss ***!
-  \***********************************/
+/***/ "./resources/sass/adminMat/adminMat.scss":
+/*!***********************************************!*\
+  !*** ./resources/sass/adminMat/adminMat.scss ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/site/site.scss":
+/*!***************************************!*\
+  !*** ./resources/sass/site/site.scss ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -123,14 +134,15 @@ function scrollTop(event) {
 /***/ }),
 
 /***/ 0:
-/*!******************************************************************!*\
-  !*** multi ./resources/js/script.js ./resources/sass/style.scss ***!
-  \******************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** multi ./resources/js/site/site.js ./resources/sass/site/site.scss ./resources/sass/adminMat/adminMat.scss ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/ramon/Mat/projects/ramonpego.dev/resources/js/script.js */"./resources/js/script.js");
-module.exports = __webpack_require__(/*! /home/ramon/Mat/projects/ramonpego.dev/resources/sass/style.scss */"./resources/sass/style.scss");
+__webpack_require__(/*! /home/ramon/Mat/projects/partners/ramonpego.dev/resources/js/site/site.js */"./resources/js/site/site.js");
+__webpack_require__(/*! /home/ramon/Mat/projects/partners/ramonpego.dev/resources/sass/site/site.scss */"./resources/sass/site/site.scss");
+module.exports = __webpack_require__(/*! /home/ramon/Mat/projects/partners/ramonpego.dev/resources/sass/adminMat/adminMat.scss */"./resources/sass/adminMat/adminMat.scss");
 
 
 /***/ })

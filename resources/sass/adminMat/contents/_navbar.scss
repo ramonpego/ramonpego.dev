@@ -1,0 +1,72 @@
+// | NAVBAR |
+.navbar {
+    z-index: 2;
+    width: 100%;
+    height: 70px;
+    background-color: $white;
+    @include shadow(0 2px 8px 0 rgba(0, 0, 0, 0.11));
+    padding-left: 0;
+
+    .navbar-brand {
+        width: 280px;
+        height: calc(70px - 20px);
+        margin: 0;
+        border-right: 1px solid $border;
+        @include display;
+        @include align(center);
+        @include justify(center);
+        position: relative;
+
+        &.small img {
+            width: 70px;
+        }
+
+        img {
+            width: 100px;
+            height: auto;
+        }
+
+        .link_action {
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            right: 0;
+            transform: translateX(50%);
+            z-index: 20;
+        }
+    }
+
+    .navbar-collapse {
+        padding-left: 30px;
+    }
+
+    .navbar-nav {
+        height: 70px;
+
+        .nav-item {
+            height: inherit;
+            border-bottom: 2px solid transparent;
+            @include display;
+            @include align(center);
+
+            &.dropdown.show {
+                .nav-link.back_text {
+                    background-color: $snow;
+                }
+            }
+
+            .nav-link {
+                margin: 0px 5px;
+
+                &.user {
+                    @include display;
+                    @include align(center);
+                }
+            }
+        }
+    }
+
+    .navbar_user .nav-item .nav-link {
+        margin: 0;
+    }
+}

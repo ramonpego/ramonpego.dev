@@ -1,0 +1,33 @@
+// | TIPOGRAFIAS |
+
+.title {
+    font-family: $font_black;
+    color: $color_sec;
+}
+
+.subtitle {
+    font-family: $font_bold;
+    color: $color_pri;
+}
+
+.text {
+    font-family: $font_regular;
+    font-size: 14px;
+    color: $black;
+    margin-bottom: 0;
+}
+
+.text_sm {
+    font-family: $font_light;
+    font-size: 13px;
+    color: $black;
+    margin-bottom: 0;
+}
+
+.text_variant {
+    font-family: $font_light;
+    font-size: 13px;
+    font-weight: 600;
+    color: $black;
+    margin-bottom: 0;
+}

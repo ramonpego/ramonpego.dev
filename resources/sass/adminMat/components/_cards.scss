@@ -1,0 +1,103 @@
+// | CARDS |
+
+// |  CARD PADRÃO |
+.card_content {
+    border: 1px solid $border;
+    border-radius: 12px;
+    background-color: $white;
+    margin: 5px 10px;
+
+    .card_header {
+        height: 70px;
+        padding: 15px 20px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        border-bottom: 1px solid $border;
+        @include display;
+        @include align(center);
+        @include justify(between);
+
+        .title {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: $color_sec;
+            margin-bottom: 0;
+        }
+    }
+
+    .card_body {
+        padding: 30px;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+
+// | CARD INFORMAÇÕES |
+.card_infos {
+    flex: 1;
+    width: 100%;
+    height: auto;
+    margin: 20px 10px;
+    border-radius: 12px;
+    border: 1px solid $border;
+    background-color: $white;
+    @include display;
+    @include align(center);
+    @include justify(center);
+    @include flex_direction(collumn);
+
+    &::before,
+    &::after {
+        content: '';
+        width: 30px;
+        height: 4px;
+        background-color: $color_pri;
+        border-radius: 32px;
+    }
+
+    &::before {
+        transform: translateY(-50%);
+    }
+
+    &::after {
+        transform: translateY(50%);
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: transparent;
+        transform: translateY(-15px);
+        -webkit-transition-property: background-color, -webkit-transform;
+        transition-property: background-color, -webkit-transform;
+        -o-transition-property: transform, background-color;
+        transition-property: transform, background-color;
+        transition-property: transform, background-color, -webkit-transform;
+        -webkit-transition-duration: 2s;
+        -o-transition-duration: 2s;
+        transition-duration: 2s;
+        -webkit-transition-timing-function: ease;
+        -o-transition-timing-function: ease;
+        transition-timing-function: ease;
+
+        .badge-primary {
+            @include gradient;
+        }
+    }
+
+    img {
+        width: 150px;
+        height: auto;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+
+    .text_sm {
+        text-transform: uppercase;
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+}
+
