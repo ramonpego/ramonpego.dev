@@ -1,5 +1,5 @@
 @extends('site.layout')
 
 @section('content')
-    conteudo
+    Lorem bla bla bla
 @endsection

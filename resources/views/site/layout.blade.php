@@ -41,9 +41,10 @@
         @include('site.partials.back_top')
 
         <!-- | SCRIPTS | -->
-        {{-- <script src="{{ asset('assets/js/jquery-3.5.1.min.js') }} "></script> --}}
+        <script src="{{ asset('assets/js/jquery.min.js') }} "></script>
         <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('js/site.js') }}"></script>
+        @stack('script')
     </body>
 
 </html>
