@@ -2,6 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 
-Auth::routes(['register' => false]);
+Route::get('login', [\App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
+Route::post('login', [\App\Http\Controllers\Auth\LoginController::class, 'login']);
+Route::post('logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
+
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'site'])->name('site');
 Route::get('/dashboard', [\App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+
+
+Route::group(['prefix'=>'admin'],function (){
+   Route::get('/', [\App\Http\Controllers\Admin\HomeController::class,'index']);
+});

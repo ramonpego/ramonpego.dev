@@ -7,7 +7,7 @@
 
     <div class="aside_content">
         <div class="aside_content_img">
-            <img class="img-fluid" src="{{ aset('assets/imgs/user.jpeg') }}" alt="Ramon Pêgo">
+            <img class="img-fluid" src="{{ asset('assets/imgs/user.jpeg') }}" alt="Ramon Pêgo">
         </div>
 
         <div class="aside_content_text">
