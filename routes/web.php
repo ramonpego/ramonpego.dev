@@ -7,9 +7,9 @@ Route::post('login', [\App\Http\Controllers\Auth\LoginController::class, 'login'
 Route::post('logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'site'])->name('site');
-Route::get('/dashboard', [\App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
 
-Route::group(['prefix'=>'admin'],function (){
-   Route::get('/', [\App\Http\Controllers\Admin\HomeController::class,'index']);
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/dashboard', [\App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+    Route::get('/admin', [\App\Http\Controllers\Admin\HomeController::class, 'index']);
 });
