@@ -1,0 +1,437 @@
+// ==========| MIXINS FLEXBOX |==========
+
+/* | DISPLAY |
+    -> Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens.
+*/
+@mixin display_flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+/* | FEX DIRECTION |
+    -> Define a direção dos flex itens.
+    -> Por padrão ele é row (linha), por isso quando o display: flex; é adicionado, os elementos ficam em linha, um do lado do outro.
+*/
+@mixin flex_direction($direction: row) {
+        // Os itens ficam em linha
+    @if ($direction == row) {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+
+        // Os itens ficam em linha reversa, ou seja 3, 2, 1.
+    } @else if ($direction == row-reverse) {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+
+        // Os itens ficam em uma única coluna, um embaixo do outro.
+    } @else if ($direction == collumn) {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column
+
+        // Os itens ficam em uma única coluna, um embaixo do outro, porém em ordem reversa: 3, 2 e 1.
+    } @else if ($direction == column-reverse) {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+}
+}
+
+/* | FLEX WRAP |
+    -> Define se os itens devem quebrar ou não a linha. Por padrão eles não quebram linha.
+*/
+@mixin flex_wrap($wrap: nowrap) {
+        // Valor padrão, não permite a quebra de linha.
+    @if ($wrap == nowrap) {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+
+        // Quebra a linha assim que um dos flex itens não puder mais ser compactado.
+    } @else if ($wrap == wrap) {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        // Quebra a linha assim que um dos flex itens não puder mais ser compactado. A quebra é na direção contrária, ou seja para a linha acima.
+    } @else if ($wrap == wrap-reverse) {
+        -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+    }
+}
+
+/* | FLEX FLOW |
+    -> O flex-flow é um atalho para as propriedades flex-direction e flex-wrap.
+*/
+@mixin flex_flow($flow) {
+    // Coloca o conteúdo em linha e não permite a quebra de linha.
+    @if ($flow == row nowrap) {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+
+        // Coloca o conteúdo em linha e permite a quebra de linha.
+    } @else if ($flow == row wrap) {
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+
+        // Coloca o conteúdo em coluna e não permite a quebra de linha.
+    } @else if ($flow == column nowrap) {
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+    }
+}
+
+/* | JUSTIFY CONTENT |
+    -> Alinha os itens flex no container de acordo com a direção.
+    -> A propriedade só funciona se os itens atuais não ocuparem todo o container.
+    -> Isso significa que ao definir flex: 1; ou algo similar nos itens, a propriedade não terá mais função.
+*/
+@mixin justify_content($justify) {
+        // Alinha os itens ao início do container.
+    @if ($justify == start) {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+
+        // Alinha os itens ao final do container.
+    } @else if ($justify == end) {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+
+        // Alinha os itens ao centro do container.
+    } @else if ($justify == center) {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+
+        // Cria um espaçamento igual entre os elementos. Mantendo o primeiro grudado no início e o último no final.
+    } @else if ($justify == between) {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+
+        // Cria um espaçamento entre os elementos. Os espaçamentos do meio são duas vezes maiores que o inicial e final.
+    } @else if ($justify == around) {
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+}
+
+/* | ALIGN ITEMS |
+    -> O align-items alinha os flex itens de acordo com o eixo do container.
+    -> O alinhamento é diferente para quando os itens estão em colunas ou linhas.
+*/
+@mixin align_items($align: stretch) {
+        // Valor padrão, ele que faz com que os flex itens cresçam igualmente.
+    @if ($align == stretch) {
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+
+        // Alinha os itens ao início.
+    } @else if ($align == start) {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+
+        // Alinha os itens ao centro.
+    } @else if ($align == center) {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+        // Alinha os itens ao final.
+    } @else if ($align == end) {
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+
+        // Alinha os itens de acordo com a linha base da tipografia.
+    } @else if ($align == baseline) {
+        -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+        align-items: baseline;
+    }
+}
+
+/* | ALIGN CONTENT |
+    -> Alinha as linhas do container em relação ao eixo vertical.
+    -> A propriedade só funciona se existir mais de uma linha de flex-itens. Para isso o flex-wrap precisa ser wrap.
+*/
+@mixin align_content($align: stretch) {
+    // Valor padrão, ele que faz com que os flex itens cresçam igualmente na vertical.
+    @if ($align == stretch) {
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+
+        // Alinha todas as linhas de itens ao início.
+    } @else if ($align == start) {
+        -ms-flex-line-pack: start;
+        align-content: flex-start;
+
+        // Alinha todas as linhas de itens ao final.
+    } @else if ($align == end) {
+        -ms-flex-line-pack: end;
+        align-content: flex-end;
+
+        // Alinha todas as linhas de itens ao centro.
+    } @else if ($align == center) {
+        -ms-flex-line-pack: center;
+        align-content: center;
+
+        // Cria um espaçamento igual entre as linhas. Mantendo a primeira grudada no topo e a última no bottom.
+    } @else if ($align == between) {
+        -ms-flex-line-pack: justify;
+        align-content: space-between;
+
+        // Cria um espaçamento entre as linhas. Os espaçamentos do meio são duas vezes maiores que o top e bottom.
+    } @else if ($align == around) {
+        -ms-flex-line-pack: distribute;
+        align-content: space-around;
+    }
+}
+
+/* | ALIGN SELF |
+    -> O align-self serve para definirmos o alinhamento específico de um único flex item dentro do nosso container.
+    -> Caso um valor seja atribuído, ele passara por cima do que for atribuído no align-items do container.
+*/
+@mixin align_self($align: auto) {
+        // Valor inicial padrão. Vai respeitar o que for definido pelo align-items no flex-container.
+    @if ($align == auto) {
+        -ms-flex-item-align: auto;
+        -ms-grid-row-align: auto;
+        align-self: auto;
+
+        // Alinha o item ao início.
+    } @else if ($align == start) {
+        -ms-flex-item-align: start;
+        align-self: flex-start;
+
+        // Alinha o item ao final.
+    } @else if ($align == end) {
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+
+        // Alinha o item ao centro.
+    } @else if ($align == center) {
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+
+        // Alinha o item a linha de base.
+    } @else if ($align == baseline) {
+        -ms-flex-item-align: baseline;
+        align-self: baseline;
+
+        // Estica o item.
+    } @else if ($align == stretch) {
+        -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+    }
+}
+
+/* | FLEX GROW |
+    -> Define a habilidade de um flex item crescer.
+    -> Por padrão o valor é zero, assim os flex itens ocupam um tamanho máximo relacionado o conteúdo interno deles ou ao width definido.
+*/
+@mixin flex_grow($grow: 0) {
+    -webkit-box-flex: $grow;
+    -ms-flex-positive: $grow;
+    flex-grow: $grow;
+}
+
+/* | FLEX BASIS |
+    -> Indica o tamanho inicial do flex item antes da distribuição do espaço restante.
+*/
+@mixin flex_basis($basis: auto) {
+    -ms-flex-preferred-size: $basis;
+    flex-basis: $basis;
+}
+
+/* | FLEX SHRINK |
+    -> Valor padrão, permite que os itens tenham os seus tamanhos (seja esse tamanho definido a partir de width ou flex-basis) reduzidos para caber no container.
+    -> Não permite a diminuição dos itens, assim um item com flex-basis: 300px; nunca diminuirá menos do que 300px, mesmo que o conteúdo não ocupe todo esse espaço.
+    -> Um item com shrink: 3 diminuirá 3 vezes mais que um item com 1.
+*/
+@mixin flex_shrink($shrink: 1) {
+    -ms-flex-negative: $shrink;
+    flex-shrink: $shrink;
+}
+
+/* | FLEX |
+    -> Atalho para as propriedades flex-grow, flex-shrink e flex-basis.
+    -> Geralmente você verá a propriedade flex nos flex itens ao invés de cada um dos valores separados.
+*/
+@mixin flex($flex: 0 1 auto) {
+    -webkit-box-flex: $flex;
+    -ms-flex: $flex;
+    flex: $flex;
+}
+
+/* | ORDER |
+    -> Modifica a ordem dos flex itens.
+    -> Sempre do menor para o maior, assim order: 1, aparece na frente de order: 5.
+*/
+@mixin order($order: 0) {
+    -webkit-box-ordinal-group: $order;
+    -ms-flex-order: $order;
+    order: $order;
+}
+
+// ==========| MIXINS GRID |==========
+
+// | DISPLAY GRID |
+@mixin display_grid {
+    display: -ms-grid;
+    display: grid;
+}
+
+/* | GRID TEMPLATE |
+    -> Escreve linhas e column ao mesmo tempo.
+    -> grid-template: auto 1fr auto / auto 1fr auto;
+    -> A "/" separa as linhas das colunas
+*/
+@mixin grid_template($values) {
+    -ms-grid-rows: $values;
+    -ms-grid-columns: $values;
+    grid-template: $values;
+}
+
+// | GRID TEMPLATE ROW |
+@mixin grid_template_row($value) {
+    -ms-grid-rows: $value;
+    grid-template-rows: $value;
+}
+
+/* | GRID TEMPLATE COLLUMN |
+    -> Exemplo: grid-template-collumns: repeat(12, 1fr);
+    -> Indica que o grid vai ter 12 colunas, e todas com o mesmo tamanho(1fr)
+    -> Evita de repetir o "1fr" 12 vezes para indiciar que existem 12 colunas
+    -> Exemplo: grid-template-collumns: repeat(auto-fit, minmax(150px, 1fr);
+    -> auto-fit (conforme a tela aumenta, os itens aumentam para ocupar todo o espaço)
+    -> o 1fr da função minmax faz com que os itens possuam o mesmo tamanho.
+    -> o 150px da função minmax faz com que os itens tenham no minimo 150px quando a tela diminui.
+*/
+@mixin grid_template_collumns($value) {
+    grid-template-collumns: $value;
+}
+
+/* | GRID COLLUMN |
+    -> Especifica o tamanho e a localização do item.
+    -> grid-collum: 1 / 13; indica que o item inicia na coluna 1 e tem tamanho que vai até a coluna 13
+    -> Ainda to confuso com essa, pois o exemplo acima significa que o item tem tamanho de 12 colunas.
+*/
+@mixin grid_collum($value) {
+    -ms-grid-column: $value;
+    -ms-grid-column-span: $value;
+    grid-column: $value;
+}
+
+/* | PACE ITEMS |
+    -> Propriedade abreviada para align-itemns & justify-itemns
+    -> Se o segundo valor não for informado, o primeiro é utilizado para os dois.
+*/
+@mixin place_items($value) {
+    place-items: $value;
+}
+
+// ==========| MIXINS OUTHERS |==========
+
+// | TRUNCATE |
+@mixin truncate($truncation) {
+    max-width: $truncation;
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+// | PLACEHOLDER |
+@mixin placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+// | SHADOW & SHADOW TEXT |
+@mixin shadow($shadow, $type: box) {
+    -webkit-box-shadow: $shadow;
+    box-shadow: $shadow;
+
+    @if ($type == text) {
+        text-shadow: $shadow;
+    }
+}
+
+// | HR |
+@mixin line($align: center, $width: 70px, $height: 2px, $color: $color_sec, $margin: 25px auto) {
+    @if ($align == center) {
+        width: $width;
+        height: $height;
+        background-color: $color;
+        margin: 25px auto;
+
+    } @else if ($align == left) {
+        width: $width;
+        height: $height;
+        background-color: $color;
+        margin: 25px 0;
+
+    } @else if($align == right) {
+        width: $width;
+        height: $height;
+        background-color: $color;
+        margin: 25px 0 25px auto;
+    }
+}
+
+// | BACKGROUNDC GRADIENT |
+@mixin gradient {
+    background: -webkit-gradient(linear, left top, right top, from($color_pri), to($color_sec));
+    background: -o-linear-gradient(left, $color_pri, $color_sec);
+    background: linear-gradient(90deg, $color_pri, $color_sec);
+}
+
+// | ANIMATION |
+@mixin animate($name, $duration, $timing, $delay: 0s, $iteration: 1, $direction: normal, $fill: none, $play: running) {
+    -webkit-animation-name: $name;
+    animation-name: $name;
+    -webkit-animation-duration: $duration;
+    animation-duration: $duration;
+    -webkit-animation-timing-function: $timing;
+    animation-timing-function: $timing;
+    -webkit-animation-delay: $delay;
+    animation-delay: $delay;
+    -webkit-animation-iteration-count: $iteration;
+    animation-iteration-count: $iteration;
+    -webkit-animation-direction: $direction;
+    animation-direction: $direction;
+    -webkit-animation-fill-mode: $fill;
+    animation-fill-mode: $fill;
+    -webkit-animation-play-state: $play;
+    animation-play-state: $play;
+}
+
+/* width: clamp(min, actual, max)
+    -> Define um tamanho minimo, atual e o máximo para um elemento.
+    -> também funciona para font.
+    -> Não funciona no navegador Safari ainda.
+*/
+
+/* aspect-ratio: width / heihgt;
+    -> Para Imagens e Videos.
+    -> Exemplo: apect-ratio: 16 / 9
+    -> O video ou a imagem sempre vai manter essa proporção de tamanho independente da tela aumentar ou diminuir.
+    -> Não funciona em nenhum navegador estável ainda.
+*/

@@ -23,22 +23,26 @@
         <link type="text/css" rel="stylesheet" href="{{ asset('css/site.css') }}">
     </head>
 
-    <body>
+    <body class="body__">
         @include('site.partials.loader')
 
-        <div class="content">
+        <div class="content__">
             @include('site.aside.aside')
 
-            <main class="main">
+            <main class="main__">
                 @include('site.navbar.navbar')
 
-                @yield('content')
-                <section class="section"> ... </section>
+                <section class="section__">
+                    <div class="container">
+                        @yield('content')
+                    </div>
+                </section>
             </main>
         </div>
 
         @include('site.footer.footer')
-        @include('site.partials.back_top')
+
+        {{-- @include('site.partials.back_top') --}}
 
         <!-- | SCRIPTS | -->
         <script src="{{ asset('assets/js/jquery.min.js') }} "></script>

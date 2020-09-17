@@ -1,0 +1,45 @@
+// | TYPOGRAPHY |
+.title {
+    font-family: $font_title;
+    letter-spacing: 2.3px;
+    text-transform: uppercase;
+    color: $black;
+    margin-bottom: 0;
+}
+
+.subtitle {
+    font-family: $font_subtitle;
+    letter-spacing: 1.9px;
+    color: $black;
+    margin-bottom: 0;
+}
+
+.text {
+    font-family: $font_pattern;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    color: $black;
+    margin-bottom: 0;
+}
+
+.text_small {
+    font-family: $font_pattern;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    color: $black;
+    margin-bottom: 0;
+}
+
+.pointer {
+    font-weight: 900;
+    font-size: 50px;
+    color: $color;
+}
+
+.divider__ {
+    width: 80px;
+    height: 5px;
+    background-color: $color;
+    margin: 5px auto 5px auto;
+}

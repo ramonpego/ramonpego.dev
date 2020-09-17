@@ -1,0 +1,47 @@
+// | ARTICLE - POSTS |
+.article__ {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    margin: 30px 0;
+
+    &:hover {
+        @include shadow(0 6px 10px rgba(0,0,0,.08));
+    }
+
+    .post__ {
+        padding: 50px;
+        border: 1px solid $border;
+        position: relative;
+
+        .post__info {
+            position: absolute;
+            top: 30px;
+            right: 25px;
+            color: $grey;
+        }
+
+        .post__header {
+            padding: 20px;
+
+            .title {
+                color: $color;
+                margin-bottom: 20px;
+            }
+        }
+
+        .post__content {
+            margin-top: 30px;
+            padding: 40px 20px;
+            background-color: $snow;
+
+            .subtitle {
+                margin-bottom: 20px;
+            }
+
+            .text {
+                margin: 15px 0;
+            }
+        }
+    }
+}

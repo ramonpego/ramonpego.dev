@@ -1,0 +1,32 @@
+// | LISTS |
+.social__ {
+    width: 100%;
+    @include display_flex;
+    @include justify_content(end);
+
+    .social__nav {
+        .social__item {
+            margin: 0 5px;
+
+            .social__link {
+                width: 35px;
+                height: 35px;
+                @include display_flex;
+                @include align_items(center);
+                @include justify_content(center);
+                padding: 5px;
+                border-radius: 50%;
+                background-color: $black;
+
+                .social__icon {
+                    width: 15px;
+                    height: auto;
+                }
+
+                &:hover {
+                    background-color: $color;
+                }
+            }
+        }
+    }
+}

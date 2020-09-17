@@ -1,0 +1,30 @@
+// | NAVBAR |
+.navbar__ {
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid $border;
+    padding: 0;
+
+    .navbar__menu {
+        height: 70px;
+
+        .navbar__item {
+            height: inherit;
+
+            .navbar__link {
+                height: inherit;
+                color: $black;
+                border-bottom: 1px solid transparent;
+                padding-left: 20px;
+                padding-right: 20px;
+                @include display_flex;
+                @include align_items(center);
+                @include justify_content(center);
+
+                &:hover, &.active {
+                    border-bottom: 1px solid $color;
+                }
+            }
+        }
+    }
+}

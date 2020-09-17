@@ -1,39 +1,39 @@
-<footer class="footer">
+<footer class="footer__">
     <div class="container-fluid">
-        <div class="div_footer">
+        <div class="footer__content">
             <div class="div_copy">
-                <span> Todos os direitos reservados &copy; Ramon Pêgo </span>
+                <span class="text_small"> &copy; Ramon Pêgo </span>
             </div>
 
-            <div class="div_social">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="mailto:ramon.pego.stl@gmail.com" target="_blank" rel="noopener">
-                            <img src="{{asset('assets/svgs/email.svg')}}" alt="E-mail Ramon">
+            <div class="social__">
+                <ul class="nav social__nav">
+                    <li class="nav-item social__item">
+                        <a class="nav-link social__link" href="mailto:ramon.pego.stl@gmail.com" target="_blank" rel="noopener">
+                            <img class="social__icon" src="{{asset('assets/svgs/email.svg')}}" alt="E-mail Ramon">
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/ramonpego" target="_blank" rel="noopener">
-                            <img src="{{asset('assets/svgs/github.svg')}}" alt="Github Ramon">
+                    <li class="nav-item social__item">
+                        <a class="nav-link social__link" href="https://github.com/ramonpego" target="_blank" rel="noopener">
+                            <img class="social__icon" src="{{asset('assets/svgs/github.svg')}}" alt="Github Ramon">
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://api.whatsapp.com/send?phone=5533991372045&" target="_blank" rel="noopener">
-                            <img src="{{asset('assets/svgs/whatsapp.svg')}}" alt="WhatsApp Ramon">
+                    <li class="nav-item social__item">
+                        <a class="nav-link social__link" href="https://api.whatsapp.com/send?phone=5533991372045&" target="_blank" rel="noopener">
+                            <img class="social__icon" src="{{asset('assets/svgs/whatsapp.svg')}}" alt="WhatsApp Ramon">
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.instagram.com/ramonpego/" target="_blank" rel="noopener">
-                            <img src="{{asset('assets/svgs/instagram.svg')}}" alt="Instagram Ramon">
+                    <li class="nav-item social__item">
+                        <a class="nav-link social__link" href="https://www.instagram.com/ramonpego/" target="_blank" rel="noopener">
+                            <img class="social__icon" src="{{asset('assets/svgs/instagram.svg')}}" alt="Instagram Ramon">
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://twitter.com/Ramon_Pego" target="_blank" rel="noopener">
-                            <img src="{{asset('assets/svgs/twitter.svg')}}" alt="Twitter Ramon">
+                    <li class="nav-item social__item">
+                        <a class="nav-link social__link" href="https://twitter.com/Ramon_Pego" target="_blank" rel="noopener">
+                            <img class="social__icon" src="{{asset('assets/svgs/twitter.svg')}}" alt="Twitter Ramon">
                         </a>
                     </li>
                 </ul>

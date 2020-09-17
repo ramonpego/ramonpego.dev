@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 *,
 *::before,
 *::after {
@@ -35,172 +37,415 @@
   font-weight: 400;
 }
 
-body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-color: #FFFFFF;
-  font-family: JetBrainsMono-Regular;
-}
+/* | DISPLAY |
+    -> Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens.
+*/
 
-.content {
-  width: 100%;
-  height: calc(100vh - 91px);
-  overflow: hidden;
-  display: flex;
-}
+/* | FEX DIRECTION |
+    -> Define a direção dos flex itens.
+    -> Por padrão ele é row (linha), por isso quando o display: flex; é adicionado, os elementos ficam em linha, um do lado do outro.
+*/
 
-.content .aside {
-  width: 350px;
-  height: calc(100vh - 91px);
-  overflow: hidden;
-}
+/* | FLEX WRAP |
+    -> Define se os itens devem quebrar ou não a linha. Por padrão eles não quebram linha.
+*/
 
-.content .aside .aside_header {
-  width: inherit;
-  height: 70px;
-  padding: 10px 30px 0 30px;
-}
+/* | FLEX FLOW |
+    -> O flex-flow é um atalho para as propriedades flex-direction e flex-wrap.
+*/
 
-.content .aside .aside_header .aside_header_content {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* | JUSTIFY CONTENT |
+    -> Alinha os itens flex no container de acordo com a direção.
+    -> A propriedade só funciona se os itens atuais não ocuparem todo o container.
+    -> Isso significa que ao definir flex: 1; ou algo similar nos itens, a propriedade não terá mais função.
+*/
+
+/* | ALIGN ITEMS |
+    -> O align-items alinha os flex itens de acordo com o eixo do container.
+    -> O alinhamento é diferente para quando os itens estão em colunas ou linhas.
+*/
+
+/* | ALIGN CONTENT |
+    -> Alinha as linhas do container em relação ao eixo vertical.
+    -> A propriedade só funciona se existir mais de uma linha de flex-itens. Para isso o flex-wrap precisa ser wrap.
+*/
+
+/* | ALIGN SELF |
+    -> O align-self serve para definirmos o alinhamento específico de um único flex item dentro do nosso container.
+    -> Caso um valor seja atribuído, ele passara por cima do que for atribuído no align-items do container.
+*/
+
+/* | FLEX GROW |
+    -> Define a habilidade de um flex item crescer.
+    -> Por padrão o valor é zero, assim os flex itens ocupam um tamanho máximo relacionado o conteúdo interno deles ou ao width definido.
+*/
+
+/* | FLEX BASIS |
+    -> Indica o tamanho inicial do flex item antes da distribuição do espaço restante.
+*/
+
+/* | FLEX SHRINK |
+    -> Valor padrão, permite que os itens tenham os seus tamanhos (seja esse tamanho definido a partir de width ou flex-basis) reduzidos para caber no container.
+    -> Não permite a diminuição dos itens, assim um item com flex-basis: 300px; nunca diminuirá menos do que 300px, mesmo que o conteúdo não ocupe todo esse espaço.
+    -> Um item com shrink: 3 diminuirá 3 vezes mais que um item com 1.
+*/
+
+/* | FLEX |
+    -> Atalho para as propriedades flex-grow, flex-shrink e flex-basis.
+    -> Geralmente você verá a propriedade flex nos flex itens ao invés de cada um dos valores separados.
+*/
+
+/* | ORDER |
+    -> Modifica a ordem dos flex itens.
+    -> Sempre do menor para o maior, assim order: 1, aparece na frente de order: 5.
+*/
+
+/* | GRID TEMPLATE |
+    -> Escreve linhas e column ao mesmo tempo.
+    -> grid-template: auto 1fr auto / auto 1fr auto;
+    -> A "/" separa as linhas das colunas
+*/
+
+/* | GRID TEMPLATE COLLUMN |
+    -> Exemplo: grid-template-collumns: repeat(12, 1fr);
+    -> Indica que o grid vai ter 12 colunas, e todas com o mesmo tamanho(1fr)
+    -> Evita de repetir o "1fr" 12 vezes para indiciar que existem 12 colunas
+    -> Exemplo: grid-template-collumns: repeat(auto-fit, minmax(150px, 1fr);
+    -> auto-fit (conforme a tela aumenta, os itens aumentam para ocupar todo o espaço)
+    -> o 1fr da função minmax faz com que os itens possuam o mesmo tamanho.
+    -> o 150px da função minmax faz com que os itens tenham no minimo 150px quando a tela diminui.
+*/
+
+/* | GRID COLLUMN |
+    -> Especifica o tamanho e a localização do item.
+    -> grid-collum: 1 / 13; indica que o item inicia na coluna 1 e tem tamanho que vai até a coluna 13
+    -> Ainda to confuso com essa, pois o exemplo acima significa que o item tem tamanho de 12 colunas.
+*/
+
+/* | PACE ITEMS |
+    -> Propriedade abreviada para align-itemns & justify-itemns
+    -> Se o segundo valor não for informado, o primeiro é utilizado para os dois.
+*/
+
+/* width: clamp(min, actual, max)
+    -> Define um tamanho minimo, atual e o máximo para um elemento.
+    -> também funciona para font.
+    -> Não funciona no navegador Safari ainda.
+*/
+
+/* aspect-ratio: width / heihgt;
+    -> Para Imagens e Videos.
+    -> Exemplo: apect-ratio: 16 / 9
+    -> O video ou a imagem sempre vai manter essa proporção de tamanho independente da tela aumentar ou diminuir.
+    -> Não funciona em nenhum navegador estável ainda.
+*/
+
+.title {
   font-family: JetBrainsMono-ExtraBold;
-  font-size: 25px;
+  letter-spacing: 2.3px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #FF4655;
-  border-bottom: 1px solid #ECE8E1;
+  color: #24292e;
+  margin-bottom: 0;
 }
 
-.content .aside .aside_content {
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  border-right: 1px solid #ECE8E1;
-  padding: 30px;
+.subtitle {
+  font-family: JetBrainsMono-Bold;
+  letter-spacing: 1.9px;
+  color: #24292e;
+  margin-bottom: 0;
 }
 
-.content .aside .aside_content .aside_content_text {
-  padding-top: 30px;
+.text {
   font-family: JetBrainsMono-Regular;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  color: #24292e;
+  margin-bottom: 0;
+}
+
+.text_small {
+  font-family: JetBrainsMono-Regular;
+  font-weight: 300;
   font-size: 13px;
-  letter-spacing: 1.2px;
-  line-height: 25px;
-  color: #0F1923;
+  letter-spacing: 1.5px;
+  color: #24292e;
+  margin-bottom: 0;
 }
 
-.content .main {
-  width: calc(100% - 350px);
-  height: inherit;
-  overflow: hidden;
-  padding: 0 15px;
+.pointer {
+  font-weight: 900;
+  font-size: 50px;
+  color: #FF4655;
 }
 
-.content .main .navbar {
-  width: 100%;
-  height: 70px;
-  border-bottom: 1px solid #ECE8E1;
+.divider__ {
+  width: 80px;
+  height: 5px;
+  background-color: #FF4655;
+  margin: 5px auto 5px auto;
 }
 
-.content .main .section {
-  width: 100%;
-  height: calc(100vh - 70px - 91px);
-  overflow: auto;
-}
-
-.footer {
-  width: 100%;
-  height: auto;
-  border-top: 1px solid #ECE8E1;
-  background-color: #FFFFFF;
-  padding: 25px 0;
-}
-
-.footer .div_footer {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0 50px;
-}
-
-.footer .div_footer .div_copy {
-  width: 100%;
-  justify-content: flex-start;
-}
-
-.footer .div_footer .div_copy span {
-  font-size: 14px;
-  font-style: italic;
-  letter-spacing: 2px;
-  color: #0F1923;
-}
-
-.footer .div_footer .div_social {
+.social__ {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
 
-.footer .div_footer .div_social .nav .nav-item {
+.social__ .social__nav .social__item {
   margin: 0 5px;
 }
 
-.footer .div_footer .div_social .nav .nav-item .nav-link {
-  width: 40px;
-  height: 40px;
+.social__ .social__nav .social__item .social__link {
+  width: 35px;
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5px;
   border-radius: 50%;
-  background-color: #FF4655;
+  background-color: #24292e;
 }
 
-.footer .div_footer .div_social .nav .nav-item .nav-link img {
-  width: 17px;
+.social__ .social__nav .social__item .social__link .social__icon {
+  width: 15px;
   height: auto;
 }
 
-.footer .div_footer .div_social .nav .nav-item .nav-link:hover {
-  background-color: #0F1923;
+.social__ .social__nav .social__item .social__link:hover {
+  background-color: #FF4655;
+}
+
+.article__ {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  margin: 30px 0;
+}
+
+.article__:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08);
+}
+
+.article__ .post__ {
+  padding: 50px;
+  border: 1px solid #EAECEF;
+  position: relative;
+}
+
+.article__ .post__ .post__info {
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  color: #6A737D;
+}
+
+.article__ .post__ .post__header {
+  padding: 20px;
+}
+
+.article__ .post__ .post__header .title {
+  color: #FF4655;
+  margin-bottom: 20px;
+}
+
+.article__ .post__ .post__content {
+  margin-top: 30px;
+  padding: 40px 20px;
+  background-color: #F5F6F7;
+}
+
+.article__ .post__ .post__content .subtitle {
+  margin-bottom: 20px;
+}
+
+.article__ .post__ .post__content .text {
+  margin: 15px 0;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #EAECEF;
+}
+
+.body__ {
+  width: 100%;
+  height: 100%;
+  font-family: JetBrainsMono-Regular;
+  color: #24292e;
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+.content__ {
+  width: 100%;
+  height: calc(100vh - 76px);
+  display: flex;
+  overflow: hidden;
+}
+
+.aside__ {
+  width: 350px;
+  height: calc(100vh - 91px);
+  overflow: hidden;
+}
+
+.aside__ .aside__content {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  border-right: 1px solid #EAECEF;
+}
+
+.aside__ .aside__content .content__header {
+  width: 100%;
+  height: 200px;
+  background-color: #F5F6F7;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.aside__ .aside__content .content__header .content__img {
+  position: absolute;
+  bottom: -125px;
+  width: 250px;
+  height: 250px;
+  border: 7px solid #F5F6F7;
+  background-color: #F5F6F7;
+  border-radius: 100%;
+}
+
+.aside__ .aside__content .content__header .content__img .img__user {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.aside__ .aside__content .content__body {
+  padding: 130px 30px 30px 30px;
+}
+
+.aside__ .aside__content .content__body .content__text .title {
+  font-size: 25px;
+  text-align: center;
+  letter-spacing: normal;
+}
+
+.aside__ .aside__content .content__body .content__text .text {
+  margin-top: 25px;
+}
+
+.main__ {
+  width: calc(100% - 350px);
+  height: inherit;
+  overflow: hidden;
+  padding: 0 40px;
+}
+
+.navbar__ {
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid #EAECEF;
+  padding: 0;
+}
+
+.navbar__ .navbar__menu {
+  height: 70px;
+}
+
+.navbar__ .navbar__menu .navbar__item {
+  height: inherit;
+}
+
+.navbar__ .navbar__menu .navbar__item .navbar__link {
+  height: inherit;
+  color: #24292e;
+  border-bottom: 1px solid transparent;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar__ .navbar__menu .navbar__item .navbar__link:hover,
+.navbar__ .navbar__menu .navbar__item .navbar__link.active {
+  border-bottom: 1px solid #FF4655;
+}
+
+.section__ {
+  width: 100%;
+  height: calc(100vh - 70px - 91px);
+  overflow: auto;
+  padding-top: 30px;
+}
+
+.footer__ {
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+}
+
+.footer__ .footer__content {
+  width: 100%;
+  height: auto;
+  border-top: 1px solid #EAECEF;
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+}
+
+.footer__ .footer__content .div_copy {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.footer__ .footer__content .div_copy .text_small {
+  font-style: italic;
 }
 
 @media (max-width: 730px) {
-  .footer .div_footer {
+  .footer .footer__content {
     flex-direction: column;
   }
 
-  .footer .div_footer .div_copy {
+  .footer .footer__content .div_copy {
     text-align: center;
     justify-content: center;
     margin-bottom: 25px;
   }
 
-  .footer .div_footer .div_social {
+  .footer .footer__content .div_social {
     justify-content: center;
   }
 }
 
 @media (max-width: 430px) {
-  .footer .div_footer {
+  .footer .footer__content {
     padding: 0 10px;
   }
 
-  .footer .div_footer .div_social .nav .nav-item {
+  .footer .footer__content .div_social .nav .nav-item {
     margin: 0 5px;
   }
 
-  .footer .div_footer .div_social .nav .nav-item .nav-link {
+  .footer .footer__content .div_social .nav .nav-item .nav-link {
     width: 40px;
     height: 40px;
     padding: 5px;
   }
 
-  .footer .div_footer .div_social .nav .nav-item .nav-link img {
+  .footer .footer__content .div_social .nav .nav-item .nav-link img {
     width: 15px;
     height: auto;
   }

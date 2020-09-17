@@ -1,12 +1,12 @@
 
 // | LOADER |
-window.addEventListener("load", function(event) {
-    const loader = document.querySelector('.loader');
-    loader.parentElement.removeChild(loader);
-});
+// window.addEventListener("load", function(event) {
+//     const loader = document.querySelector('loader');
+//     loader.parentElement.removeChild(loader);
+// });
 
 // | BAK TO TOP |
-document.querySelector(".back_top").addEventListener("click", scrollTop);
+document.querySelector(".back__top").addEventListener("click", scrollTop);
 
 function scrollTop(event) {
     event.preventDefault();

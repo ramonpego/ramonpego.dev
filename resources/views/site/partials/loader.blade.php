@@ -1,3 +1,3 @@
-<div class="loader">
+<div class="loader__">
     <div class="loading"></div>
 </div>

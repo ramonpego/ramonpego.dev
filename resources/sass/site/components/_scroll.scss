@@ -1,0 +1,16 @@
+// | SCROLLS |
+
+// | Barra de rolagem |
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+// | Fundo da barra de rolagem |
+::-webkit-scrollbar-track {
+    background-color: transparent !important;
+}
+
+// | Alça da barra de rolagem |
+::-webkit-scrollbar-thumb {
+    background-color: $border;
+}

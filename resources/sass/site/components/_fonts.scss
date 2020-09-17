@@ -8,7 +8,7 @@
     font-stretch: normal;
     font-weight: 800;
 }
-$font_extra: JetBrainsMono-ExtraBold;
+$font_title: JetBrainsMono-ExtraBold;
 
 @font-face {
 	font-family: JetBrainsMono-Bold;
@@ -19,7 +19,7 @@ $font_extra: JetBrainsMono-ExtraBold;
     font-stretch: normal;
     font-weight: 700;
 }
-$font_bold: JetBrainsMono-Bold;
+$font_subtitle: JetBrainsMono-Bold;
 
 @font-face {
 	font-family: JetBrainsMono-Regular;
@@ -30,4 +30,4 @@ $font_bold: JetBrainsMono-Bold;
     font-stretch: normal;
     font-weight: 400;
 }
-$font_regular: JetBrainsMono-Regular;
+$font_pattern: JetBrainsMono-Regular;

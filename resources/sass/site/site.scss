@@ -1,12 +1,18 @@
 // | IMPORTS |
 
-// | CONFIGURATIONS |
-@import "configuration/reset";
-@import "configuration/colors";
-@import "configuration/fonts";
-@import "configuration/mixins";
+@import "components/reset";
+@import "components/colors";
+@import "components/fonts";
+@import "components/mixins";
+@import "components/typography";
+@import "components/lists";
+@import "components/article";
+@import "components/scroll";
 
-// | COMPONENTS |
+@import "components/body";
 @import "components/content";
+@import "components/aside";
+@import "components/main";
+@import "components/navbar";
+@import "components/section";
 @import "components/footer";
-@import "components/mediaqueries";
