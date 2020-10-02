@@ -6,13 +6,13 @@
 // });
 
 // | BAK TO TOP |
-document.querySelector(".back__top").addEventListener("click", scrollTop);
+// document.querySelector(".back__top").addEventListener("click", scrollTop);
 
-function scrollTop(event) {
-    event.preventDefault();
+// function scrollTop(event) {
+//     event.preventDefault();
 
-    window.scroll({
-        top: 0,
-        behavior: "smooth",
-    });
-}
+//     window.scroll({
+//         top: 0,
+//         behavior: "smooth",
+//     });
+// }

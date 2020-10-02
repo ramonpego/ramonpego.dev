@@ -1,0 +1,44 @@
+
+.action__icon {
+    z-index: 3;
+    position: absolute;
+    top: 100px;
+    right: 0;
+
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    border: 1px solid $border;
+    border-radius: 10px;
+    background-color: $white;
+    @include shadow(0 20px 20px -10px rgba(0, 0, 0, 0.2));
+    @include display_flex;
+    @include align_items(center);
+    @include justify_content(center);
+
+    &::before  {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        background-image: url('../../../../public/assets/svgs/arrow.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-origin: border-box;
+        background-clip: border-box;
+    }
+
+    &.aciton__top {
+        transform: rotate(180deg);
+    }
+
+    &.aciton__right {
+        transform: rotate(270deg);
+    }
+
+    &.aciton__left {
+        transform: rotate(90deg);
+    }
+}

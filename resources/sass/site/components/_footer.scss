@@ -1,24 +1,23 @@
 // | FOOTER |
 .footer__ {
     width: 100%;
-    height: auto;
-    padding-top: 20px;
+    height: 60px;
+    border-top: 1px solid $border;
 
     .footer__content {
         width: 100%;
-        height: auto;
-        border-top: 1px solid $border;
-        padding: 10px 50px;
+        height: 100%;
+        padding: 0 50px;
         @include display_flex;
         @include align_items(center);
+        @include justify_content(between);
 
         .div_copy {
-            width: 100%;
-            @include justify_content(start);
+            flex: 1;
+        }
 
-            .text_small {
-                font-style: italic;
-            }
+        .social__ {
+            flex: 2;
         }
     }
 }

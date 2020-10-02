@@ -99,15 +99,14 @@
 //     loader.parentElement.removeChild(loader);
 // });
 // | BAK TO TOP |
-document.querySelector(".back__top").addEventListener("click", scrollTop);
-
-function scrollTop(event) {
-  event.preventDefault();
-  window.scroll({
-    top: 0,
-    behavior: "smooth"
-  });
-}
+// document.querySelector(".back__top").addEventListener("click", scrollTop);
+// function scrollTop(event) {
+//     event.preventDefault();
+//     window.scroll({
+//         top: 0,
+//         behavior: "smooth",
+//     });
+// }
 
 /***/ }),
 
@@ -140,9 +139,9 @@ function scrollTop(event) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/ramon/Mat/projects/partners/ramonpego.dev/resources/js/site/site.js */"./resources/js/site/site.js");
-__webpack_require__(/*! /home/ramon/Mat/projects/partners/ramonpego.dev/resources/sass/site/site.scss */"./resources/sass/site/site.scss");
-module.exports = __webpack_require__(/*! /home/ramon/Mat/projects/partners/ramonpego.dev/resources/sass/adminMat/adminMat.scss */"./resources/sass/adminMat/adminMat.scss");
+__webpack_require__(/*! /home/matheus/dev/projects/partners/ramonpego.dev/resources/js/site/site.js */"./resources/js/site/site.js");
+__webpack_require__(/*! /home/matheus/dev/projects/partners/ramonpego.dev/resources/sass/site/site.scss */"./resources/sass/site/site.scss");
+module.exports = __webpack_require__(/*! /home/matheus/dev/projects/partners/ramonpego.dev/resources/sass/adminMat/adminMat.scss */"./resources/sass/adminMat/adminMat.scss");
 
 
 /***/ })

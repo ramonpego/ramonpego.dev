@@ -1,19 +1,28 @@
 // | ASIDE |
 .aside__ {
     width: 350px;
-    height: calc(100vh - 91px);
+    // height: calc(100vh - 91px);
     overflow: hidden;
+    position: relative;
 
     .aside__content {
         width: 100%;
         height: 100%;
         overflow: auto;
         border-right: 1px solid $border;
+        position: relative;
 
-        .content__header {
+        .action__icon {
+            z-index: 3;
+            position: absolute;
+            top: 100px;
+            right: 0;
+        }
+
+        .aside__header {
             width: 100%;
             height: 200px;
-            background-color: $snow;
+            background-image: $gradient;
             padding: 15px;
             @include display_flex;
             @include align_items(center);
@@ -21,7 +30,7 @@
             @include flex_direction(collumn);
             position: relative;
 
-            .content__img {
+            .aside__img {
                 position: absolute;
                 bottom: -125px;
                 width: 250px;
@@ -30,29 +39,48 @@
                 background-color: $snow;
                 border-radius: 100%;
 
-                .img__user {
+                .img__ {
                     width: 100%;
                     height: 100%;
                     border-radius: 100%;
+                    cursor: pointer;
                 }
             }
         }
 
-        .content__body {
+        .aside__body {
             padding: 130px 30px 30px 30px;
 
-            .content__text {
-
+            .aside__infos {
                 .title {
                     font-size: 25px;
                     text-align: center;
                     letter-spacing: normal;
+                    margin-bottom: 20px;
                 }
 
-                .text {
+                .text, .text_small {
                     margin-top: 25px;
+                    // text-align: justify;
                 }
             }
+        }
+    }
+}
+
+
+.list__ {
+    list-style: none;
+    // padding-left: 0;
+
+    .list__item {
+        @include display_flex;
+        margin-bottom: 15px;
+
+        img {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
         }
     }
 }

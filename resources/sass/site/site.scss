@@ -1,10 +1,13 @@
 // | IMPORTS |
 
-@import "components/reset";
-@import "components/colors";
-@import "components/fonts";
-@import "components/mixins";
+@import "settings/reset";
+@import "settings/colors";
+@import "settings/fonts";
+@import "settings/mixins";
+
 @import "components/typography";
+@import "components/buttons";
+
 @import "components/lists";
 @import "components/article";
 @import "components/scroll";
