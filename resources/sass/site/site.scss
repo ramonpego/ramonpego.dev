@@ -5,17 +5,16 @@
 @import "settings/fonts";
 @import "settings/mixins";
 
+@import "components/scroll";
 @import "components/typography";
 @import "components/buttons";
-
 @import "components/lists";
 @import "components/article";
-@import "components/scroll";
 
-@import "components/body";
-@import "components/content";
-@import "components/aside";
-@import "components/main";
-@import "components/navbar";
-@import "components/section";
-@import "components/footer";
+@import "contents/body";
+@import "contents/content";
+@import "contents/aside";
+@import "contents/main";
+@import "contents/navbar";
+@import "contents/section";
+@import "contents/footer";

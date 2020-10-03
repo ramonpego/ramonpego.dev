@@ -2,8 +2,11 @@
 .article__ {
     width: 100%;
     height: auto;
-    cursor: pointer;
+    border: 1px solid $border;
+    border-radius: 7px;
+    background-color: $white;
     margin: 30px 0;
+    cursor: pointer;
 
     &:hover {
         @include shadow(0 6px 10px rgba(0,0,0,.08));
@@ -11,27 +14,44 @@
 
     .post__ {
         padding: 50px;
-        border: 1px solid $border;
         position: relative;
+
+        .post__category {
+            position: absolute;
+            top: -20px;
+            left: 50px;
+            width: 120px;
+            height: 40px;
+            color: $black;
+            background-color: $color;
+            @include display_flex;
+            @include align_items(center);
+            @include justify_content(center);
+        }
 
         .post__info {
             position: absolute;
-            top: 30px;
-            right: 25px;
-            color: $grey;
+            top: 0;
+            right: 0;
+            border: 1px solid $border;
+            padding: 15px;
+
+            .text_small {
+                color: $grey;
+            }
         }
 
         .post__header {
             padding: 20px;
+            margin-bottom: 50px;
 
             .title {
-                color: $color;
                 margin-bottom: 20px;
             }
         }
 
         .post__content {
-            margin-top: 30px;
+            margin-bottom: 50px;
             padding: 40px 20px;
             background-color: $snow;
 
@@ -42,6 +62,17 @@
             .text {
                 margin: 15px 0;
             }
+        }
+
+        .post__action {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin: 0;
+            height: 60px;
+            @include display_flex;
+            @include align_items(center);
+            @include justify_content(center);
         }
     }
 }

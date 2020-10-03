@@ -1,6 +1,6 @@
 <aside class="aside__">
     <div class="aside__content">
-        <div class="action__icon aciton__left"></div>
+        {{-- <div class="action__icon aciton__left"></div> --}}
 
         <div class="aside__header">
             <div class="aside__img">
