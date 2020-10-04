@@ -27,15 +27,13 @@
         @include('site.partials.loader')
 
         <div class="content__">
-            @include('site.aside.aside')
+            @include('site.sidebar.sidebar')
 
             <main class="main__">
                 @include('site.navbar.navbar')
 
                 <section class="section__">
-                    <div class="container">
-                        @yield('content')
-                    </div>
+                    @yield('content')
                 </section>
             </main>
         </div>

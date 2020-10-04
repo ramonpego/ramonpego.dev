@@ -37,9 +37,37 @@
     color: $color;
 }
 
+.sobtitle {
+    font-family: $font_title;
+    font-size: 20px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: $color;
+    margin-bottom: 0;
+}
+
 .divider__ {
     width: 80px;
     height: 5px;
     background-color: $color;
     margin: 5px auto 5px auto;
+}
+
+
+.div__title {
+    text-align: center;
+
+    .title {
+        font-size: 60px;
+        text-transform: initial;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        color: $grey;
+        line-height: 2;
+        margin-bottom: 30px;
+    }
 }

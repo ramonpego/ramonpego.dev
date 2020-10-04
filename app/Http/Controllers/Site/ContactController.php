@@ -1,18 +1,19 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Site;
 
-use App\Models\Post;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
-{
+class ContactController extends Controller {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() {}
+    public function index() {
+        return view('site.content.contact');
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -32,33 +33,33 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Post  $post
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post) {}
+    public function show($id) {}
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Post  $post
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post) {}
+    public function edit($id) {}
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Post  $post
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post) {}
+    public function update(Request $request, $id) {}
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Post  $post
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post) {}
+    public function destroy($id) {}
 }

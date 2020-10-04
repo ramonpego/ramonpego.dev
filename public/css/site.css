@@ -156,14 +156,14 @@
   font-family: JetBrainsMono-ExtraBold;
   letter-spacing: 2.3px;
   text-transform: uppercase;
-  color: #24292e;
+  color: #24292E;
   margin-bottom: 0;
 }
 
 .subtitle {
   font-family: JetBrainsMono-Bold;
   letter-spacing: 1.9px;
-  color: #24292e;
+  color: #24292E;
   margin-bottom: 0;
 }
 
@@ -171,7 +171,7 @@
   font-family: JetBrainsMono-Regular;
   font-size: 15px;
   letter-spacing: 1.5px;
-  color: #24292e;
+  color: #24292E;
   margin-bottom: 0;
 }
 
@@ -180,7 +180,7 @@
   font-weight: 300;
   font-size: 13px;
   letter-spacing: 1.5px;
-  color: #24292e;
+  color: #24292E;
   margin-bottom: 0;
 }
 
@@ -190,11 +190,38 @@
   color: #FF4655;
 }
 
+.sobtitle {
+  font-family: JetBrainsMono-ExtraBold;
+  font-size: 20px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #FF4655;
+  margin-bottom: 0;
+}
+
 .divider__ {
   width: 80px;
   height: 5px;
   background-color: #FF4655;
   margin: 5px auto 5px auto;
+}
+
+.div__title {
+  text-align: center;
+}
+
+.div__title .title {
+  font-size: 60px;
+  text-transform: initial;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+.div__title .subtitle {
+  color: #6A737D;
+  line-height: 2;
+  margin-bottom: 30px;
 }
 
 .action__icon {
@@ -247,7 +274,8 @@
   margin: 5px;
   color: #FFFFFF;
   border: none;
-  background-color: #24292e;
+  border-radius: 8px;
+  background-color: #24292E;
   text-decoration: none;
   outline: none;
   display: inline-block;
@@ -258,6 +286,7 @@
 .button__solid:hover {
   color: #FFFFFF;
   background-color: #FF4655;
+  box-shadow: rgba(255, 63, 82, 0.5) 0px 1px 40px;
 }
 
 .social__ {
@@ -278,7 +307,7 @@
   justify-content: center;
   padding: 5px;
   border-radius: 50%;
-  background-color: #24292e;
+  background-color: #24292E;
 }
 
 .social__ .social__nav .social__item .social__link .social__icon {
@@ -288,6 +317,75 @@
 
 .social__ .social__nav .social__item .social__link:hover {
   background-color: #FF4655;
+}
+
+.div_form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.div_form .section_row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.div_form form {
+  width: 100%;
+}
+
+.div_form form fieldset {
+  width: 100%;
+}
+
+.form_item {
+  flex: 1;
+  margin: 10px;
+}
+
+.form_item.item_center {
+  display: flex;
+  justify-content: center;
+}
+
+.form_item.right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+label {
+  font-family: JetBrainsMono-Regular;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #24292E;
+}
+
+.form-text {
+  font-size: 14px;
+  color: #FF4655;
+}
+
+.form-control {
+  width: 100%;
+  height: 50px;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 7px;
+  background-color: transparent;
+  border: 1px solid #EAECEF;
+  font-family: JetBrainsMono-Regular;
+}
+
+textarea.form-control {
+  height: 150px;
+  resize: none;
 }
 
 .article__ {
@@ -315,7 +413,7 @@
   left: 50px;
   width: 120px;
   height: 40px;
-  color: #24292e;
+  color: #24292E;
   background-color: #FF4655;
   display: flex;
   align-items: center;
@@ -368,11 +466,16 @@
   justify-content: center;
 }
 
+.article__ .post__ .post__action.button__solid {
+  border-radius: 0;
+  border-bottom-right-radius: 7px;
+}
+
 .body__ {
   width: 100%;
   height: 100%;
   font-family: JetBrainsMono-Regular;
-  color: #24292e;
+  color: #24292E;
   background-color: #FFFFFF;
   overflow: hidden;
 }
@@ -388,6 +491,9 @@
   width: 350px;
   overflow: hidden;
   position: relative;
+}
+
+.aside__:hover {
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -490,7 +596,7 @@
 
 .navbar__ .navbar__menu .navbar__item .navbar__link {
   height: inherit;
-  color: #24292e;
+  color: #24292E;
   border-bottom: 1px solid transparent;
   padding-left: 20px;
   padding-right: 20px;
@@ -509,6 +615,14 @@
   height: calc(100vh - 70px - 91px);
   overflow: auto;
   padding-top: 30px;
+}
+
+.section__ .div__wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer__ {

@@ -73,6 +73,11 @@
             @include display_flex;
             @include align_items(center);
             @include justify_content(center);
+
+            &.button__solid {
+                border-radius: 0;
+                border-bottom-right-radius: 7px;
+            }
         }
     }
 }

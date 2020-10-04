@@ -50,6 +50,7 @@
     margin: 5px;
     color: $white;
     border: none;
+    border-radius: 8px;
     background-color: $black;
     text-decoration: none;
     outline: none;
@@ -60,5 +61,6 @@
     &:hover {
         color: $white;
         background-color: $color;
+        @include shadow(rgba(283, 63, 82, 0.5) 0px 1px 40px);
     }
 }
