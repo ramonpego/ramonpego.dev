@@ -610,6 +610,34 @@ textarea.form-control {
   border-bottom: 1px solid #FF4655;
 }
 
+.navbar__ .navbar__menu .navbar__item .navbar__link.sidebar__action .line__icon {
+  position: relative;
+  width: 30px;
+  height: 2px;
+  border: none;
+  border-radius: 7px;
+  background-color: #24292E;
+}
+
+.navbar__ .navbar__menu .navbar__item .navbar__link.sidebar__action .line__icon::before,
+.navbar__ .navbar__menu .navbar__item .navbar__link.sidebar__action .line__icon::after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 2px;
+  border: none;
+  border-radius: 7px;
+  background-color: #24292E;
+}
+
+.navbar__ .navbar__menu .navbar__item .navbar__link.sidebar__action .line__icon::before {
+  margin-top: -10px;
+}
+
+.navbar__ .navbar__menu .navbar__item .navbar__link.sidebar__action .line__icon::after {
+  margin-top: 10px;
+}
+
 .section__ {
   width: 100%;
   height: calc(100vh - 70px - 91px);

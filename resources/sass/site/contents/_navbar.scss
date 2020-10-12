@@ -24,6 +24,35 @@
                 &:hover, &.active {
                     border-bottom: 1px solid $color;
                 }
+
+                &.sidebar__action {
+                    .line__icon {
+                        position: relative;
+                        width: 30px;
+                        height: 2px;
+                        border: none;
+                        border-radius: 7px;
+                        background-color: $black;
+
+                        &::before, &::after {
+                            position: absolute;
+                            content: '';
+                            width: 30px;
+                            height: 2px;
+                            border: none;
+                            border-radius: 7px;
+                            background-color: $black;
+                        }
+
+                        &::before {
+                            margin-top: -10px;
+                        }
+
+                        &::after {
+                            margin-top: 10px;
+                        }
+                    }
+                }
             }
         }
     }

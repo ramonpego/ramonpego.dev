@@ -107,6 +107,21 @@
 //         behavior: "smooth",
 //     });
 // }
+document.querySelector('.sidebar__action').addEventListener('click', function (event) {
+  event.preventDefault();
+  var sidebar = document.querySelector('.aside__');
+  var main = document.querySelector('.main__');
+
+  if (sidebar.style.width == '350px') {
+    sidebar.style.width = '0px';
+    sidebar.style.opacity = 0;
+    main.style.width = '100%';
+  } else {
+    sidebar.style.width = '350px';
+    sidebar.style.opacity = 1;
+    main.style.width = 'calc(100% - 350px)';
+  }
+});
 
 /***/ }),
 

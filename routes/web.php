@@ -6,8 +6,8 @@ Route::get('login', [\App\Http\Controllers\Auth\LoginController::class, 'showLog
 Route::post('login', [\App\Http\Controllers\Auth\LoginController::class, 'login']);
 Route::post('logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
 
-Route::get('/', [\App\Http\Controllers\Site\HomeController::class, 'index'])->name('home');
-Route::get('posts', [\App\Http\Controllers\Site\PostController::class, 'index'])->name('posts');
+Route::get('/', [\App\Http\Controllers\Site\PostController::class, 'index'])->name('home');
+Route::get('post/', [\App\Http\Controllers\Site\PostController::class, 'detalhes'])->name('post');
 Route::get('contacts', [\App\Http\Controllers\Site\ContactController::class, 'index'])->name('contact');
 
 Route::group(['middleware' => 'auth'], function () {
