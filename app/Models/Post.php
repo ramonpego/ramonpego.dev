@@ -15,12 +15,40 @@ class Post extends Model
     protected $fillable =['title','description','type','text','acesses','edit_reason','author_id'];
 
     /**
+     * The accessors to append to the model's array form.
+     * @var array
+     */
+    protected $appends=[
+        'type_description'
+    ];
+
+    /**
+     * Types of posts
+     * @var string[]
+     */
+    static $types = [
+        1=>'Post',
+        2=>'Link',
+        3=>'Propaganda'
+    ];
+
+    /**
+     * Convert type on his description
+     * @return string
+     */
+    public function getTypeDescriptionAttribute(){
+        return self::$types[$this->type];
+    }
+
+
+    /**
      * get user who created this post
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function author(){
         return $this->belongsTo(User::class);
     }
+
 
     /**
      * When creating a record automatically creates a slug based on title

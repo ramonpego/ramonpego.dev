@@ -10,7 +10,7 @@ $factory->define(Post::class, function (Faker $faker) {
         'title'=>$faker->sentence,
         'slug'=>$faker->unique()->slug,
         'description'=>$faker->paragraph,
-        'text'=>$faker->text,
+        'text'=>$faker->realText(5000),
         'author_id'=>1
     ];
 });

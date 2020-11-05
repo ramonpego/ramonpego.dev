@@ -25,8 +25,7 @@
                 </ul>
 
                 <p class="text_small">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam cupiditate cumque in magni amet quo distinctio quibusdam dolor enim quia, velit consequuntur ad nemo! Voluptates ducimus unde eum at velit?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt non ipsa velit obcaecati aliquid doloribus,
+                    :)
                 </p>
             </div>
         </div>

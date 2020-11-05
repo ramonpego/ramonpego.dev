@@ -8,6 +8,7 @@ Route::post('logout', [\App\Http\Controllers\Auth\LoginController::class, 'logou
 
 Route::get('/', [\App\Http\Controllers\Site\PostController::class, 'index'])->name('home');
 Route::get('post/', [\App\Http\Controllers\Site\PostController::class, 'detalhes'])->name('post');
+Route::get('post/{post}', [\App\Http\Controllers\Site\PostController::class, 'show'])->name('posts.show');
 Route::get('contacts', [\App\Http\Controllers\Site\ContactController::class, 'index'])->name('contact');
 
 Route::group(['middleware' => 'auth'], function () {

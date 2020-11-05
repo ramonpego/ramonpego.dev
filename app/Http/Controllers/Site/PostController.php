@@ -9,10 +9,11 @@ use Illuminate\Http\Request;
 class PostController extends Controller {
 
     public function index() {
-        return view('site.content.posts');
+        $posts = Post::query()->paginate(5);
+        return view('site.content.home',compact('posts'));
     }
 
-    public function detalhes() {
-        return view('site.content.post');
+    public function show(Post $post) {
+        return view('site.content.post',compact('post'));
     }
 }
