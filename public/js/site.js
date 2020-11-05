@@ -140,9 +140,9 @@ function scrollTop(event) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/ramon/Mat/projects/partners/ramonpego.dev/resources/js/site/site.js */"./resources/js/site/site.js");
-__webpack_require__(/*! /home/ramon/Mat/projects/partners/ramonpego.dev/resources/sass/site/site.scss */"./resources/sass/site/site.scss");
-module.exports = __webpack_require__(/*! /home/ramon/Mat/projects/partners/ramonpego.dev/resources/sass/adminMat/adminMat.scss */"./resources/sass/adminMat/adminMat.scss");
+__webpack_require__(/*! /home/ramon/Projetos/ramonpego.dev/resources/js/site/site.js */"./resources/js/site/site.js");
+__webpack_require__(/*! /home/ramon/Projetos/ramonpego.dev/resources/sass/site/site.scss */"./resources/sass/site/site.scss");
+module.exports = __webpack_require__(/*! /home/ramon/Projetos/ramonpego.dev/resources/sass/adminMat/adminMat.scss */"./resources/sass/adminMat/adminMat.scss");
 
 
 /***/ })

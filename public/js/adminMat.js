@@ -206,7 +206,7 @@ x.addListener(myFunction); // Attach listener function on state changes
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/ramon/Mat/projects/partners/ramonpego.dev/resources/js/adminMat/adminMat.js */"./resources/js/adminMat/adminMat.js");
+module.exports = __webpack_require__(/*! /home/ramon/Projetos/ramonpego.dev/resources/js/adminMat/adminMat.js */"./resources/js/adminMat/adminMat.js");
 
 
 /***/ })

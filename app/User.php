@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\Database;
 use App\Models\Post;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -44,5 +45,13 @@ class User extends Authenticatable {
      */
     public function posts() {
         return $this->hasMany(Post::class);
+    }
+
+    /**
+     * Return all databases from the user
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function databases() {
+        return $this->hasMany(Database::class);
     }
 }
