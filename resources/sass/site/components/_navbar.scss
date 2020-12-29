@@ -13,6 +13,7 @@
             height: inherit;
 
             .navbar__link {
+                cursor: pointer;
                 height: inherit;
                 padding-left: 1.25rem;
                 padding-right: 1.25rem;
@@ -56,5 +57,13 @@
                 }
             }
         }
+    }
+}
+
+// |  MEDIA QUERIES |
+
+@media(max-width: 900px) {
+    .navbar__ {
+        padding: 0 2rem;
     }
 }

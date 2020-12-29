@@ -1,11 +1,11 @@
 {{--<span class="sr-only">(current)</span>--}}
 
-<nav class="navbar navbar-expand-lg navbar__">
+<nav class="navbar navbar-expand-sm navbar__">
     <span class="navbar-brand"> Ramon Pêgo<span class="pointer">.</span> </span>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    {{-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-    </button>
+    </button> --}}
 
     <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav ml-auto navbar__menu">
@@ -18,9 +18,9 @@
             </li>
 
             <li class="nav-item navbar__item">
-                <a class="nav-link navbar__link sidebar__action" href="#">
+                <div class="nav-link navbar__link sidebar__action">
                     <span class="line__icon"></span>
-                </a>
+                </div>
             </li>
         </ul>
     </div>

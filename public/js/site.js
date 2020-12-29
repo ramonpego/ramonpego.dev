@@ -93,6 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+// | SCRIPT |
 // | LOADER |
 // window.addEventListener("load", function(event) {
 //     const loader = document.querySelector('loader');
@@ -107,8 +108,12 @@
 //         behavior: "smooth",
 //     });
 // }
-document.querySelector('.sidebar__action').addEventListener('click', function (event) {
-  event.preventDefault();
+// | SIDEBAR ACTION |
+var sidebarAction = document.querySelector('.sidebar__action');
+sidebarAction.addEventListener('click', sidebar__toglle);
+
+function sidebar__toglle() {
+  // event.preventDefault();
   var sidebar = document.querySelector('.aside__');
   var main = document.querySelector('.main__');
 
@@ -121,7 +126,7 @@ document.querySelector('.sidebar__action').addEventListener('click', function (e
     sidebar.style.opacity = 1;
     main.style.width = 'calc(100% - 350px)';
   }
-});
+}
 
 /***/ }),
 

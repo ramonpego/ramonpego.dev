@@ -31,3 +31,18 @@
         }
     }
 }
+
+.list__ {
+    list-style: none;
+
+    .list__item {
+        margin-bottom: 0.938rem;
+        @include display__flex;
+
+        img {
+            width: 1.563rem;
+            height: 1.563rem;
+            margin-right: 0.625rem;
+        }
+    }
+}

@@ -1,11 +1,14 @@
+// | SCRIPT |
 
 // | LOADER |
+
 // window.addEventListener("load", function(event) {
 //     const loader = document.querySelector('loader');
 //     loader.parentElement.removeChild(loader);
 // });
 
 // | BAK TO TOP |
+
 // document.querySelector(".back__top").addEventListener("click", scrollTop);
 
 // function scrollTop(event) {
@@ -17,10 +20,14 @@
 //     });
 // }
 
+// | SIDEBAR ACTION |
 
+var sidebarAction = document.querySelector('.sidebar__action');
 
-document.querySelector('.sidebar__action').addEventListener('click', function(event) {
-    event.preventDefault();
+sidebarAction.addEventListener('click', sidebar__toglle);
+
+function sidebar__toglle() {
+    // event.preventDefault();
 
     let sidebar = document.querySelector('.aside__');
     let main = document.querySelector('.main__');
@@ -35,4 +42,4 @@ document.querySelector('.sidebar__action').addEventListener('click', function(ev
         sidebar.style.opacity = 1;
         main.style.width = 'calc(100% - 350px)';
     }
-});
+}

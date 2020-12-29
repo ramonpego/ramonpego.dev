@@ -14,3 +14,11 @@
         @include justify__content(center);
     }
 }
+
+// |  MEDIA QUERIES |
+
+@media (max-width: 500px) {
+    .section__ {
+        height: calc(100vh - 70px - 100px);
+    }
+}

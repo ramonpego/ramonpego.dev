@@ -72,18 +72,14 @@
     }
 }
 
-.list__ {
-    list-style: none;
-    // padding-left: 0;
+// |  MEDIA QUERIES |
 
-    .list__item {
-        margin-bottom: 0.938rem;
-        @include display__flex;
-
-        img {
-            width: 1.563rem;
-            height: 1.563rem;
-            margin-right: 0.625rem;
-        }
+@media(max-width: 900px) {
+    .aside__ {
+        width: 0;
+        // z-index: 5;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
     }
 }

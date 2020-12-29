@@ -6,3 +6,12 @@
     padding: 0 2.5rem;
     overflow: hidden;
 }
+
+// |  MEDIA QUERIES |
+
+@media(max-width: 900px) {
+    .main__ {
+        width: 100%;
+        padding: 0;
+    }
+}
