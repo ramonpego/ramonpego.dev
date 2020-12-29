@@ -1,0 +1,62 @@
+// | GRID |
+
+// | DISPLAY GRID |
+
+@mixin display__grid {
+    display: -ms-grid;
+    display: grid;
+}
+
+/* | GRID TEMPLATE |
+    -> Escreve linhas e column ao mesmo tempo.
+    -> grid-template: auto 1fr auto / auto 1fr auto;
+    -> A "/" separa as linhas das colunas
+*/
+
+@mixin grid__template($values) {
+    -ms-grid-rows: $values;
+    -ms-grid-columns: $values;
+    grid-template: $values;
+}
+
+// | GRID TEMPLATE ROW |
+
+@mixin grid__template_row($value) {
+    -ms-grid-rows: $value;
+    grid-template-rows: $value;
+}
+
+/* | GRID TEMPLATE column |
+    -> Exemplo: grid-template-columns: repeat(12, 1fr);
+    -> Indica que o grid vai ter 12 colunas, e todas com o mesmo tamanho(1fr)
+    -> Evita de repetir o "1fr" 12 vezes para indiciar que existem 12 colunas
+    -> Exemplo: grid-template-columns: repeat(auto-fit, minmax(9.375rem, 1fr);
+    -> auto-fit (conforme a tela aumenta, os itens aumentam para ocupar todo o espaço)
+    -> o 1fr da função minmax faz com que os itens possuam o mesmo tamanho.
+    -> o 9.375rem da função minmax faz com que os itens tenham no minimo 9.375rem quando a tela diminui.
+*/
+
+@mixin grid__template__columns($value) {
+    grid-template-columns: $value;
+}
+
+/* | GRID column |
+    -> Especifica o tamanho e a localização do item.
+    -> grid-collum: 1 / 13; indica que o item inicia na coluna 1 e tem tamanho que vai até a coluna 13
+    -> Ainda to confuso com essa, pois o exemplo acima significa que o item tem tamanho de 12 colunas.
+*/
+
+@mixin grid__collum($value) {
+    -ms-grid-column: $value;
+    -ms-grid-column-span: $value;
+    grid-column: $value;
+}
+
+/* | PACE ITEMS |
+    -> Propriedade abreviada para align-itemns & justify-itemns
+    -> Se o segundo valor não for informado, o primeiro é utilizado para os dois.
+*/
+
+@mixin place__items($value) {
+    place-items: $value;
+}

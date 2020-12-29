@@ -1,0 +1,97 @@
+// | OUTHERS |
+
+// | TRUNCATE |
+
+@mixin truncate__($truncation) {
+    max-width: $truncation;
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+// | PLACEHOLDER |
+
+@mixin placeholder__ {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+// | SHADOW & SHADOW TEXT |
+
+@mixin shadow__($shadow, $type: box) {
+    -webkit-box-shadow: $shadow;
+    box-shadow: $shadow;
+
+    @if ($type == text) {
+        text-shadow: $shadow;
+    }
+}
+
+// | HR |
+
+@mixin line__($align: center, $width: 4.375rem, $height: 0.125rem, $color__: $color___sec, $margin: 1.563rem auto) {
+    @if ($align == center) {
+        width: $width;
+        height: $height;
+        background-color: $color__;
+        margin: 1.563rem auto;
+
+    } @else if ($align == left) {
+        width: $width;
+        height: $height;
+        background-color: $color__;
+        margin: 1.563rem 0;
+
+    } @else if($align == right) {
+        width: $width;
+        height: $height;
+        background-color: $color__;
+        margin: 1.563rem 0 1.563rem auto;
+    }
+}
+
+// | BACKGROUNDC GRADIENT |
+
+@mixin gradient__ {
+    background: -webkit-gradient(linear, left top, right top, from($color___pri), to($color___sec));
+    background: -o-linear-gradient(left, $color___pri, $color___sec);
+    background: linear-gradient(90deg, $color___pri, $color___sec);
+}
+
+// | ANIMATION |
+
+@mixin animate__($name, $duration, $timing, $delay: 0s, $iteration: 1, $direction: normal, $fill: none, $play: running) {
+    -webkit-animation-name: $name;
+    animation-name: $name;
+    -webkit-animation-duration: $duration;
+    animation-duration: $duration;
+    -webkit-animation-timing-function: $timing;
+    animation-timing-function: $timing;
+    -webkit-animation-delay: $delay;
+    animation-delay: $delay;
+    -webkit-animation-iteration-count: $iteration;
+    animation-iteration-count: $iteration;
+    -webkit-animation-direction: $direction;
+    animation-direction: $direction;
+    -webkit-animation-fill-mode: $fill;
+    animation-fill-mode: $fill;
+    -webkit-animation-play-state: $play;
+    animation-play-state: $play;
+}
+
+/* width: clamp(min, actual, max)
+    -> Define um tamanho minimo, atual e o máximo para um elemento.
+    -> também funciona para font.
+    -> Não funciona no navegador Safari ainda.
+*/
+
+/* aspect-ratio: width / heihgt;
+    -> Para Imagens e Videos.
+    -> Exemplo: apect-ratio: 16 / 9
+    -> O video ou a imagem sempre vai manter essa proporção de tamanho independente da tela aumentar ou diminuir.
+    -> Não funciona em nenhum navegador estável ainda.
+*/

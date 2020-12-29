@@ -4,7 +4,7 @@
 
         <div class="aside__header">
             <div class="aside__img">
-                <img class="img__" src="{{ asset('assets/imgs/user.jpeg') }}" alt="Ramon Pêgo">
+                <img class="img__" src="{{ asset('assets/medias/user.jpeg') }}" alt="Ramon Pêgo">
             </div>
         </div>
 
@@ -14,12 +14,12 @@
 
                 <ul class="list__">
                     <li class="list__item">
-                        <img src="{{ asset('assets/svgs/certificado.svg') }}" alt="">
+                        <img src="{{ asset('assets/medias/svgs/certificado.svg') }}" alt="">
                         Bacharel em SI
                     </li>
 
                     <li class="list__item">
-                        <img src="{{ asset('assets/svgs/code.svg') }}" alt="">
+                        <img src="{{ asset('assets/medias/svgs/code.svg') }}" alt="">
                         Backend Developer
                     </li>
                 </ul>

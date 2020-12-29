@@ -1,27 +1,27 @@
 // | BUTTONS |
+
 .action__icon {
     z-index: 3;
     position: absolute;
     top: 100px;
     right: 0;
-
     cursor: pointer;
-    width: 45px;
-    height: 45px;
-    border: 1px solid $border;
-    border-radius: 10px;
+    width: 2.813rem;
+    height: 2.813rem;
+    border: 0.063rem solid $border;
+    border-radius: 0.625rem;
     background-color: $white;
-    @include shadow(0 20px 20px -10px rgba(0, 0, 0, 0.2));
-    @include display_flex;
-    @include align_items(center);
-    @include justify_content(center);
+    @include shadow__(0 1.25rem 1.25rem -0.625rem rgba(0, 0, 0, 0.2));
+    @include display__flex;
+    @include align__items(center);
+    @include justify__content(center);
 
     &::before  {
         content: '';
         position: absolute;
-        width: 18px;
-        height: 18px;
-        background-image: url('../../../../public/assets/svgs/arrow.svg');
+        width: 1.125rem;
+        height: 1.125rem;
+        background-image: url('../../../../public/assets/medias/svgs/arrow.svg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -44,23 +44,23 @@
 }
 
 .button__solid {
-    min-width: 150px;
+    cursor: pointer;
+    min-width: 9.375rem;
     height: auto;
-    padding: 10px 20px;
-    margin: 5px;
-    color: $white;
+    padding: 0.625rem 1.25rem;
+    margin: 0.313rem;
     border: none;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     background-color: $black;
-    text-decoration: none;
     outline: none;
     display: inline-block;
+    text-decoration: none;
     text-align: center;
-    cursor: pointer;
+    color: $white;
 
     &:hover {
         color: $white;
         background-color: $color;
-        @include shadow(rgba(283, 63, 82, 0.5) 0px 1px 40px);
+        @include shadow__(rgba(283, 63, 82, 0.5) 0rem 0.063rem 2.5rem);
     }
 }

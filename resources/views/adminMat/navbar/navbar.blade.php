@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand">
     <div class="navbar-brand">
-        <img src="{{ asset('assets/svgs/logo.svg') }}" alt=".">
+        <img src="{{ asset('assets/medias/svgs/logo.svg') }}" alt=".">
 
         <a class="link_action link_fancytree" id="sidebar_action" href="#">
             <i class="icon ui-2_menu-34"></i>
@@ -60,7 +60,7 @@
                 <a class="nav-link user" href="#">
                     <div class="avatar_back">
                         <div class="avatar avatar_small">
-                            <img class="avatar_img" src="{{ asset('assets/svgs/avatar.svg') }}" alt="...">
+                            <img class="avatar_img" src="{{ asset('assets/medias/svgs/avatar.svg') }}" alt="...">
                         </div>
 
                         <div class="avatar_infos">

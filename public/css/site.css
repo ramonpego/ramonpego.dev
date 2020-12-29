@@ -4,10 +4,11 @@
 *::before,
 *::after {
   margin: 0;
+  padding: 0;
   border: 0;
   box-sizing: border-box;
-  outline: none;
-  text-decoration: none;
+  outline: none !important;
+  text-decoration: none !important;
 }
 
 @font-face {
@@ -86,7 +87,7 @@
 
 /* | FLEX SHRINK |
     -> Valor padrão, permite que os itens tenham os seus tamanhos (seja esse tamanho definido a partir de width ou flex-basis) reduzidos para caber no container.
-    -> Não permite a diminuição dos itens, assim um item com flex-basis: 300px; nunca diminuirá menos do que 300px, mesmo que o conteúdo não ocupe todo esse espaço.
+    -> Não permite a diminuição dos itens, assim um item com flex-basis: 18.75rem; nunca diminuirá menos do que 18.75rem, mesmo que o conteúdo não ocupe todo esse espaço.
     -> Um item com shrink: 3 diminuirá 3 vezes mais que um item com 1.
 */
 
@@ -106,17 +107,17 @@
     -> A "/" separa as linhas das colunas
 */
 
-/* | GRID TEMPLATE COLLUMN |
-    -> Exemplo: grid-template-collumns: repeat(12, 1fr);
+/* | GRID TEMPLATE column |
+    -> Exemplo: grid-template-columns: repeat(12, 1fr);
     -> Indica que o grid vai ter 12 colunas, e todas com o mesmo tamanho(1fr)
     -> Evita de repetir o "1fr" 12 vezes para indiciar que existem 12 colunas
-    -> Exemplo: grid-template-collumns: repeat(auto-fit, minmax(150px, 1fr);
+    -> Exemplo: grid-template-columns: repeat(auto-fit, minmax(9.375rem, 1fr);
     -> auto-fit (conforme a tela aumenta, os itens aumentam para ocupar todo o espaço)
     -> o 1fr da função minmax faz com que os itens possuam o mesmo tamanho.
-    -> o 150px da função minmax faz com que os itens tenham no minimo 150px quando a tela diminui.
+    -> o 9.375rem da função minmax faz com que os itens tenham no minimo 9.375rem quando a tela diminui.
 */
 
-/* | GRID COLLUMN |
+/* | GRID column |
     -> Especifica o tamanho e a localização do item.
     -> grid-collum: 1 / 13; indica que o item inicia na coluna 1 e tem tamanho que vai até a coluna 13
     -> Ainda to confuso com essa, pois o exemplo acima significa que o item tem tamanho de 12 colunas.
@@ -141,7 +142,7 @@
 */
 
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 0.938rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -154,7 +155,7 @@
 
 .title {
   font-family: JetBrainsMono-ExtraBold;
-  letter-spacing: 2.3px;
+  letter-spacing: 0.144rem;
   text-transform: uppercase;
   color: #24292E;
   margin-bottom: 0;
@@ -162,15 +163,15 @@
 
 .subtitle {
   font-family: JetBrainsMono-Bold;
-  letter-spacing: 1.9px;
+  letter-spacing: 0.119rem;
   color: #24292E;
   margin-bottom: 0;
 }
 
 .text {
   font-family: JetBrainsMono-Regular;
-  font-size: 15px;
-  letter-spacing: 1.5px;
+  font-size: 0.938rem;
+  letter-spacing: 0.094rem;
   color: #24292E;
   margin-bottom: 0;
 }
@@ -178,32 +179,32 @@
 .text_small {
   font-family: JetBrainsMono-Regular;
   font-weight: 300;
-  font-size: 13px;
-  letter-spacing: 1.5px;
+  font-size: 0.813rem;
+  letter-spacing: 0.094rem;
   color: #24292E;
   margin-bottom: 0;
 }
 
 .pointer {
   font-weight: 900;
-  font-size: 50px;
+  font-size: 3.125rem;
   color: #FF4655;
 }
 
 .sobtitle {
   font-family: JetBrainsMono-ExtraBold;
-  font-size: 20px;
-  letter-spacing: 5px;
+  font-size: 1.25rem;
+  letter-spacing: 0.313rem;
   text-transform: uppercase;
   color: #FF4655;
   margin-bottom: 0;
 }
 
 .divider__ {
-  width: 80px;
-  height: 5px;
+  width: 5rem;
+  height: 0.313rem;
   background-color: #FF4655;
-  margin: 5px auto 5px auto;
+  margin: 0.313rem auto 0.313rem auto;
 }
 
 .div__title {
@@ -211,17 +212,17 @@
 }
 
 .div__title .title {
-  font-size: 60px;
+  font-size: 3.75rem;
   text-transform: initial;
-  margin-top: 50px;
-  margin-bottom: 40px;
+  margin-top: 3.125rem;
+  margin-bottom: 2.5rem;
   line-height: 1.2;
 }
 
 .div__title .subtitle {
   color: #6A737D;
   line-height: 2;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 .action__icon {
@@ -230,12 +231,12 @@
   top: 100px;
   right: 0;
   cursor: pointer;
-  width: 45px;
-  height: 45px;
-  border: 1px solid #EAECEF;
-  border-radius: 10px;
+  width: 2.813rem;
+  height: 2.813rem;
+  border: 0.063rem solid #EAECEF;
+  border-radius: 0.625rem;
   background-color: #FFFFFF;
-  box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1.25rem 1.25rem -0.625rem rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -244,8 +245,8 @@
 .action__icon::before {
   content: "";
   position: absolute;
-  width: 18px;
-  height: 18px;
+  width: 1.125rem;
+  height: 1.125rem;
   background-image: url(/images/arrow.svg?e56d764b46fba446f076411140e9dd0c);
   background-size: cover;
   background-position: center;
@@ -268,25 +269,25 @@
 }
 
 .button__solid {
-  min-width: 150px;
+  cursor: pointer;
+  min-width: 9.375rem;
   height: auto;
-  padding: 10px 20px;
-  margin: 5px;
-  color: #FFFFFF;
+  padding: 0.625rem 1.25rem;
+  margin: 0.313rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   background-color: #24292E;
-  text-decoration: none;
   outline: none;
   display: inline-block;
+  text-decoration: none;
   text-align: center;
-  cursor: pointer;
+  color: #FFFFFF;
 }
 
 .button__solid:hover {
   color: #FFFFFF;
   background-color: #FF4655;
-  box-shadow: rgba(255, 63, 82, 0.5) 0px 1px 40px;
+  box-shadow: rgba(255, 63, 82, 0.5) 0rem 0.063rem 2.5rem;
 }
 
 .social__ {
@@ -296,22 +297,22 @@
 }
 
 .social__ .social__nav .social__item {
-  margin: 0 5px;
+  margin: 0 0.313rem;
 }
 
 .social__ .social__nav .social__item .social__link {
-  width: 35px;
-  height: 35px;
+  width: 2.188rem;
+  height: 2.188rem;
+  padding: 0.313rem;
+  border-radius: 50%;
+  background-color: #24292E;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px;
-  border-radius: 50%;
-  background-color: #24292E;
 }
 
 .social__ .social__nav .social__item .social__link .social__icon {
-  width: 15px;
+  width: 0.938rem;
   height: auto;
 }
 
@@ -345,7 +346,7 @@
 
 .form_item {
   flex: 1;
-  margin: 10px;
+  margin: 0.625rem;
 }
 
 .form_item.item_center {
@@ -361,60 +362,60 @@
 label {
   font-family: JetBrainsMono-Regular;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
   color: #24292E;
 }
 
 .form-text {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #FF4655;
 }
 
 .form-control {
   width: 100%;
-  height: 50px;
-  margin-top: 15px;
-  padding: 10px;
-  border-radius: 7px;
+  height: 3.125rem;
+  padding: 0.625rem;
+  margin-top: 0.938rem;
+  border-radius: 0.44rem;
+  border: 0.063rem solid #EAECEF;
   background-color: transparent;
-  border: 1px solid #EAECEF;
   font-family: JetBrainsMono-Regular;
 }
 
 textarea.form-control {
-  height: 150px;
+  height: 9.375rem;
   resize: none;
 }
 
 .article__ {
+  cursor: pointer;
   width: 100%;
   height: auto;
-  border: 1px solid #EAECEF;
-  border-radius: 7px;
+  margin: 1.875rem 0;
+  border: 0.063rem solid #EAECEF;
+  border-radius: 0.44rem;
   background-color: #FFFFFF;
-  margin: 30px 0;
-  cursor: pointer;
 }
 
 .article__:hover {
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0.375rem 0.625rem rgba(0, 0, 0, 0.08);
 }
 
 .article__ .post__ {
-  padding: 50px;
   position: relative;
+  padding: 3.125rem;
 }
 
 .article__ .post__ .post__category {
   position: absolute;
   top: -20px;
   left: 50px;
-  width: 120px;
-  height: 40px;
-  color: #24292E;
+  width: 7.5rem;
+  height: 2.5rem;
   background-color: #FF4655;
+  color: #24292E;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -424,8 +425,8 @@ textarea.form-control {
   position: absolute;
   top: 0;
   right: 0;
-  border: 1px solid #EAECEF;
-  padding: 15px;
+  border: 0.063rem solid #EAECEF;
+  padding: 0.938rem;
 }
 
 .article__ .post__ .post__info .text_small {
@@ -433,34 +434,34 @@ textarea.form-control {
 }
 
 .article__ .post__ .post__header {
-  padding: 20px;
-  margin-bottom: 50px;
+  padding: 1.25rem;
+  margin-bottom: 3.125rem;
 }
 
 .article__ .post__ .post__header .title {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .article__ .post__ .post__content {
-  margin-bottom: 50px;
-  padding: 40px 20px;
+  margin-bottom: 3.125rem;
+  padding: 2.5rem 1.25rem;
   background-color: #F5F6F7;
 }
 
 .article__ .post__ .post__content .subtitle {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .article__ .post__ .post__content .text {
-  margin: 15px 0;
+  margin: 0.938rem 0;
 }
 
 .article__ .post__ .post__action {
   position: absolute;
   bottom: 0;
   right: 0;
+  height: 3.75rem;
   margin: 0;
-  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -468,41 +469,41 @@ textarea.form-control {
 
 .article__ .post__ .post__action.button__solid {
   border-radius: 0;
-  border-bottom-right-radius: 7px;
+  border-bottom-right-radius: 0.44rem;
 }
 
 .body__ {
   width: 100%;
   height: 100%;
-  font-family: JetBrainsMono-Regular;
-  color: #24292E;
   background-color: #FFFFFF;
   overflow: hidden;
+  font-family: JetBrainsMono-Regular;
+  color: #24292E;
 }
 
 .content__ {
   width: 100%;
   height: calc(100vh - 60px);
-  display: flex;
   overflow: hidden;
+  display: flex;
 }
 
 .aside__ {
+  position: relative;
   width: 350px;
   overflow: hidden;
-  position: relative;
 }
 
 .aside__:hover {
-  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0.75rem 0 rgba(0, 0, 0, 0.1);
 }
 
 .aside__ .aside__content {
+  position: relative;
   width: 100%;
   height: 100%;
   overflow: auto;
-  border-right: 1px solid #EAECEF;
-  position: relative;
+  border-right: 0.063rem solid #EAECEF;
 }
 
 .aside__ .aside__content .action__icon {
@@ -513,48 +514,48 @@ textarea.form-control {
 }
 
 .aside__ .aside__content .aside__header {
+  position: relative;
   width: 100%;
-  height: 200px;
+  height: 12.5rem;
+  padding: 0.938rem;
   background-color: #F5F6F7;
-  padding: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  position: relative;
 }
 
 .aside__ .aside__content .aside__header .aside__img {
   position: absolute;
   bottom: -125px;
-  width: 250px;
-  height: 250px;
-  border: 7px solid #F5F6F7;
-  background-color: #F5F6F7;
+  width: 15.625rem;
+  height: 15.625rem;
+  border: 0.44rem solid #F5F6F7;
   border-radius: 100%;
+  background-color: #F5F6F7;
 }
 
 .aside__ .aside__content .aside__header .aside__img .img__ {
+  cursor: pointer;
   width: 100%;
   height: 100%;
-  border-radius: 100%;
-  cursor: pointer;
+  border-radius: 50%;
 }
 
 .aside__ .aside__content .aside__body {
-  padding: 130px 30px 30px 30px;
+  padding: 8.125rem 1.875rem 1.875rem 1.875rem;
 }
 
 .aside__ .aside__content .aside__body .aside__infos .title {
-  font-size: 25px;
-  text-align: center;
+  margin-bottom: 1.25rem;
+  font-size: 1.563rem;
   letter-spacing: normal;
-  margin-bottom: 20px;
+  text-align: center;
 }
 
 .aside__ .aside__content .aside__body .aside__infos .text,
 .aside__ .aside__content .aside__body .aside__infos .text_small {
-  margin-top: 25px;
+  margin-top: 1.563rem;
 }
 
 .list__ {
@@ -562,28 +563,28 @@ textarea.form-control {
 }
 
 .list__ .list__item {
+  margin-bottom: 0.938rem;
   display: flex;
-  margin-bottom: 15px;
 }
 
 .list__ .list__item img {
-  width: 25px;
-  height: 25px;
-  margin-right: 10px;
+  width: 1.563rem;
+  height: 1.563rem;
+  margin-right: 0.625rem;
 }
 
 .main__ {
   width: calc(100% - 350px);
   height: inherit;
+  padding: 0 2.5rem;
   overflow: hidden;
-  padding: 0 40px;
 }
 
 .navbar__ {
   width: 100%;
   height: 70px;
-  border-bottom: 1px solid #EAECEF;
   padding: 0;
+  border-bottom: 0.063rem solid #EAECEF;
 }
 
 .navbar__ .navbar__menu {
@@ -596,10 +597,10 @@ textarea.form-control {
 
 .navbar__ .navbar__menu .navbar__item .navbar__link {
   height: inherit;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  border-bottom: 0.063rem solid transparent;
   color: #24292E;
-  border-bottom: 1px solid transparent;
-  padding-left: 20px;
-  padding-right: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -607,15 +608,15 @@ textarea.form-control {
 
 .navbar__ .navbar__menu .navbar__item .navbar__link:hover,
 .navbar__ .navbar__menu .navbar__item .navbar__link.active {
-  border-bottom: 1px solid #FF4655;
+  border-bottom: 0.063rem solid #FF4655;
 }
 
 .navbar__ .navbar__menu .navbar__item .navbar__link.sidebar__action .line__icon {
   position: relative;
-  width: 30px;
-  height: 2px;
+  width: 1.875rem;
+  height: 0.125rem;
   border: none;
-  border-radius: 7px;
+  border-radius: 0.44rem;
   background-color: #24292E;
 }
 
@@ -623,26 +624,26 @@ textarea.form-control {
 .navbar__ .navbar__menu .navbar__item .navbar__link.sidebar__action .line__icon::after {
   position: absolute;
   content: "";
-  width: 30px;
-  height: 2px;
+  width: 1.875rem;
+  height: 0.125rem;
   border: none;
-  border-radius: 7px;
+  border-radius: 0.44rem;
   background-color: #24292E;
 }
 
 .navbar__ .navbar__menu .navbar__item .navbar__link.sidebar__action .line__icon::before {
-  margin-top: -10px;
+  margin-top: -0.625rem;
 }
 
 .navbar__ .navbar__menu .navbar__item .navbar__link.sidebar__action .line__icon::after {
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 
 .section__ {
   width: 100%;
   height: calc(100vh - 70px - 91px);
+  padding-top: 1.875rem;
   overflow: auto;
-  padding-top: 30px;
 }
 
 .section__ .div__wrapper {
@@ -656,13 +657,13 @@ textarea.form-control {
 .footer__ {
   width: 100%;
   height: 60px;
-  border-top: 1px solid #EAECEF;
+  border-top: 0.063rem solid #EAECEF;
 }
 
 .footer__ .footer__content {
   width: 100%;
   height: 100%;
-  padding: 0 50px;
+  padding: 0 3.125rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -683,8 +684,8 @@ textarea.form-control {
 
   .footer .footer__content .div_copy {
     text-align: center;
-    justify-content: center;
     margin-bottom: 25px;
+    justify-content: center;
   }
 
   .footer .footer__content .div_social {
@@ -694,21 +695,21 @@ textarea.form-control {
 
 @media (max-width: 430px) {
   .footer .footer__content {
-    padding: 0 10px;
+    padding: 0 0.625rem;
   }
 
   .footer .footer__content .div_social .nav .nav-item {
-    margin: 0 5px;
+    margin: 0 0.313rem;
   }
 
   .footer .footer__content .div_social .nav .nav-item .nav-link {
-    width: 40px;
-    height: 40px;
-    padding: 5px;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.313rem;
   }
 
   .footer .footer__content .div_social .nav .nav-item .nav-link img {
-    width: 15px;
+    width: 0.938rem;
     height: auto;
   }
 }

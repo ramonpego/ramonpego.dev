@@ -19,7 +19,7 @@
         <!-- | STYLES | -->
         {{-- <link type="image/png" rel="shortcut icon" href="{{ asset('assets/favicon.ico') }}"> --}}
         <link type="text/css" rel="stylesheet" href="{{ asset('assets/icons/nucleo-outline.css') }}">
-        <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('assets/bootstrap/bootstrap.min.css') }}">
         <link type="text/css" rel="stylesheet" href="{{ asset('css/adminMat.css') }}">
         @stack('styles')
     </head>
@@ -50,8 +50,8 @@
         </div>
 
         <!-- | SCRIPTS | -->
-        <script src="{{ asset('assets/js/jquery-3.5.1.min.js') }} "></script>
-        <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('assets/jquery/jquery-3.5.1.min.js') }} "></script>
+        <script src="{{ asset('assets/bootstrap/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('js/adminMat.js') }}"></script>
         @stack('scripts')
     </body>

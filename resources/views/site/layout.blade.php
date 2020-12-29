@@ -19,7 +19,7 @@
         <!-- | STYLES | -->
         {{-- <link type="image/png" rel="shortcut icon" href="# "> --}}
         <link type="text/css" rel="stylesheet" href="{{ asset('assets/icons/nucleo-outline.css') }}">
-        <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('assets/bootstrap/bootstrap.min.css') }}">
         <link type="text/css" rel="stylesheet" href="{{ asset('css/site.css') }}">
     </head>
 
@@ -43,8 +43,8 @@
         {{-- @include('site.partials.back_top') --}}
 
         <!-- | SCRIPTS | -->
-        <script src="{{ asset('assets/js/jquery.min.js') }} "></script>
-        <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('assets/jquery/jquery.min.js') }} "></script>
+        <script src="{{ asset('assets/bootstrap/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('js/site.js') }}"></script>
         @stack('script')
     </body>

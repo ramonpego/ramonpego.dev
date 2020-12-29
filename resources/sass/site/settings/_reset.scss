@@ -1,8 +1,12 @@
-// | RESET |
-*, *::before, *::after {
+// | CSS RESET |
+
+*,
+*::before,
+*::after {
     margin: 0;
+    padding: 0;
     border: 0;
     box-sizing: border-box;
-    outline: none;
-    text-decoration: none;
+    outline: none !important;
+    text-decoration: none !important;
 }

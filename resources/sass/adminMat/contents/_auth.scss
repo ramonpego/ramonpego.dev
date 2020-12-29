@@ -11,9 +11,9 @@
 .auth_section {
     padding: 30px;
     background-color: $color_pri;
-    background-image: url('../../../../public/assets/svgs/back.png'), -webkit-gradient(linear, left top, right top, from($color_pri), to($color_sec));
-    background-image: url('../../../../public/assets/svgs/back.png'), -o-linear-gradient(left, $color_pri, $color_sec);
-    background-image: url('../../../../public/assets/svgs/back.png'), linear-gradient(90deg, $color_pri, $color_sec);
+    background-image: url('../../../../public/assets/medias/svgs/back.png'), -webkit-gradient(linear, left top, right top, from($color_pri), to($color_sec));
+    background-image: url('../../../../public/assets/medias/svgs/back.png'), -o-linear-gradient(left, $color_pri, $color_sec);
+    background-image: url('../../../../public/assets/medias/svgs/back.png'), linear-gradient(90deg, $color_pri, $color_sec);
     background-size: cover;
     background-origin: border-box;
     background-clip: border-box;

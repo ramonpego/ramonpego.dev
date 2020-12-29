@@ -1,25 +1,26 @@
 // | LISTS |
+
 .social__ {
     width: 100%;
-    @include display_flex;
-    @include justify_content(end);
+    @include display__flex;
+    @include justify__content(end);
 
     .social__nav {
         .social__item {
-            margin: 0 5px;
+            margin: 0 0.313rem;
 
             .social__link {
-                width: 35px;
-                height: 35px;
-                @include display_flex;
-                @include align_items(center);
-                @include justify_content(center);
-                padding: 5px;
+                width: 2.188rem;
+                height: 2.188rem;
+                padding: 0.313rem;
                 border-radius: 50%;
                 background-color: $black;
+                @include display__flex;
+                @include align__items(center);
+                @include justify__content(center);
 
                 .social__icon {
-                    width: 15px;
+                    width: 0.938rem;
                     height: auto;
                 }
 

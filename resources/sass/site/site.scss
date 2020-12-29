@@ -3,7 +3,9 @@
 @import "settings/reset";
 @import "settings/colors";
 @import "settings/fonts";
-@import "settings/mixins";
+@import "settings/mixin_flexbox";
+@import "settings/mixin_grid";
+@import "settings/mixin_others";
 
 @import "components/scroll";
 @import "components/typography";
@@ -11,11 +13,10 @@
 @import "components/lists";
 @import "components/forms";
 @import "components/article";
-
-@import "contents/body";
-@import "contents/content";
-@import "contents/aside";
-@import "contents/main";
-@import "contents/navbar";
-@import "contents/section";
-@import "contents/footer";
+@import "components/body";
+@import "components/content";
+@import "components/aside";
+@import "components/main";
+@import "components/navbar";
+@import "components/section";
+@import "components/footer";
