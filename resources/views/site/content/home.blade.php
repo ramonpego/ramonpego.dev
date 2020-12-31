@@ -1,7 +1,7 @@
 @extends('site.layout')
 
 @section('content')
-    <div class="container">
+    <div class="container__">
         @foreach($posts as $post)
             <article class="article__">
                 <div class="post__">

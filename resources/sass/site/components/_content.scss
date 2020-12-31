@@ -6,3 +6,11 @@
     overflow: hidden;
     @include display__flex;
 }
+
+// |  MEDIA QUERIES |
+
+@media(max-width: 500px) {
+    .content__ {
+        height: calc(100vh - 100px);
+    }
+}

@@ -1,27 +1,26 @@
-{{--<span class="sr-only">(current)</span>--}}
 
-<nav class="navbar navbar-expand-sm navbar__">
-    <span class="navbar-brand"> Ramon Pêgo<span class="pointer">.</span> </span>
+<nav class="navbar__">
+    <span class="navbar__brand"> Ramon Pêgo<span class="pointer">.</span> </span>
 
-    {{-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button> --}}
+    <ul class="navbar__menu">
+        <li class="navbar__item">
+            <a class="navbar__link" href="{{ route('home') }}"> Posts </a>
+        </li>
 
-    <div class="collapse navbar-collapse" id="navbar">
-        <ul class="navbar-nav ml-auto navbar__menu">
-            <li class="nav-item navbar__item">
-                <a class="nav-link navbar__link" href="{{ route('home') }}"> Posts </a>
-            </li>
+        <li class="navbar__item">
+            <a class="navbar__link" href="{{ route('contact') }}"> Contato </a>
+        </li>
 
-            <li class="nav-item navbar__item">
-                <a class="nav-link navbar__link" href="{{ route('contact') }}"> Contato </a>
-            </li>
+        <li class="navbar__item">
+            <div class="navbar__link sidebar__action">
+                <span class="line__icon"></span>
+            </div>
+        </li>
 
-            <li class="nav-item navbar__item">
-                <div class="nav-link navbar__link sidebar__action">
-                    <span class="line__icon"></span>
-                </div>
-            </li>
-        </ul>
-    </div>
+        <li class="navbar__item">
+            <div class="navbar__link sidebar__action__mobile">
+                <span class="line__icon"></span>
+            </div>
+        </li>
+    </ul>
 </nav>

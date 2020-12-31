@@ -1,7 +1,6 @@
 // | ARTICLE - POSTS |
 
 .article__ {
-    cursor: pointer;
     width: 100%;
     height: auto;
     margin: 1.875rem 0;
@@ -80,5 +79,13 @@
                 border-bottom-right-radius: 0.44rem;
             }
         }
+    }
+}
+
+// |  MEDIA QUERIES |
+
+@media(max-width: 900px) {
+    .article__ .post__ {
+        padding: 3.125rem 1rem;
     }
 }

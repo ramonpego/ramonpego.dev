@@ -6,6 +6,11 @@
     @include justify__content(end);
 
     .social__nav {
+        list-style: none;
+        @include display__flex;
+        @include align__items(center);
+        @include justify__content(center);
+
         .social__item {
             margin: 0 0.313rem;
 

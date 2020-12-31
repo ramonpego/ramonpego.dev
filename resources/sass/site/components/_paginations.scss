@@ -1,0 +1,50 @@
+// | PAGINATE |
+
+.pagination {
+    list-style: none;
+    @include display__flex;
+    @include align__items(center);
+    @include justify__content(center);
+    @include flex__wrap(wrap);
+
+    .page-item {
+        .page-link {
+            width: 40px;
+            height: auto;
+            margin: 0.125rem;
+            padding: 0.44rem;
+            border: 0.063rem solid $border;
+            border-radius: 0.44rem;
+            color: $grey;
+            @include display__flex;
+            @include align__items(center);
+            @include justify__content(center);
+
+            &.btn {
+                cursor: pointer;
+                width: auto;
+                border-radius: 7px;
+                font-size: 0.813rem;
+                color: $color;
+
+                &:hover {
+                    color: $white;
+                    background-color: $color;
+                }
+            }
+        }
+
+        &.disabled:hover .page-link.btn {
+            cursor: not-allowed;
+            background-color: $snow;
+            color: $grey;
+        }
+
+        &.active {
+            .page-link {
+                color: $white;
+                background-color: $color;
+            }
+        }
+    }
+}

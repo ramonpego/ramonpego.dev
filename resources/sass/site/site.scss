@@ -7,12 +7,16 @@
 @import "settings/mixin_grid";
 @import "settings/mixin_others";
 
+@import "components/containers";
 @import "components/scroll";
+@import "components/animations";
+@import "components/loaders";
 @import "components/typography";
 @import "components/buttons";
 @import "components/lists";
 @import "components/forms";
 @import "components/article";
+@import "components/paginations";
 @import "components/body";
 @import "components/content";
 @import "components/aside";

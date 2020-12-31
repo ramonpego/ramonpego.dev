@@ -1,44 +1,5 @@
 // | FORMS |
 
-.div_form {
-    width: 100%;
-    height: auto;
-    @include display__flex;
-    @include justify__content(center);
-    @include flex__direction(column);
-
-    .section_row {
-        width: 100%;
-        @include display__flex;
-        @include align__items(center);
-        @include justify__content(center);
-        @include flex__wrap(wrap);
-    }
-
-    form {
-        width: 100%;
-
-        fieldset {
-            width: 100%;
-        }
-    }
-}
-
-.form_item {
-    flex: 1;
-    margin: 0.625rem;
-
-    &.item_center {
-        @include display__flex;
-        @include justify__content(center);
-    }
-
-    &.right {
-        @include display__flex;
-        @include justify__content(end);
-    }
-}
-
 label {
     font-family: $font_pattern;
     font-weight: 600;
@@ -67,4 +28,43 @@ label {
 textarea.form-control {
     height: 9.375rem;
     resize: none;
+}
+
+.div__form {
+    width: 100%;
+    height: auto;
+    @include display__flex;
+    @include justify__content(center);
+    @include flex__direction(column);
+
+    .form__ {
+        width: 100%;
+
+        .fieldset__ {
+            width: 100%;
+        }
+    }
+
+    .form__row {
+        width: 100%;
+        @include display__flex;
+        @include align__items(center);
+        @include justify__content(center);
+        @include flex__wrap(wrap);
+
+        .form__item {
+            flex: 1;
+            margin: 0.625rem;
+
+            &.item__center {
+                @include display__flex;
+                @include justify__content(center);
+            }
+
+            &.right__ {
+                @include display__flex;
+                @include justify__content(end);
+            }
+        }
+    }
 }

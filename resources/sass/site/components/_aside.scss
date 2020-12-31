@@ -1,9 +1,11 @@
 // | ASIDE |
+
 .aside__ {
     position: relative;
     width: 350px;
-    // height: calc(100vh - 91px);
     overflow: hidden;
+    background-color: $white;
+    transition: all 0.8s ease;
 
     &:hover {
         @include shadow__(0 0 0.75rem 0 rgba(0, 0, 0, .1), 0 0.625rem 30px 0 rgba(0, 0, 0, .2));
@@ -19,8 +21,9 @@
         .action__icon {
             z-index: 3;
             position: absolute;
-            top: 100px;
-            right: 0;
+            top: 10px;
+            right: 10px;
+            display: none;
         }
 
         .aside__header {
@@ -72,14 +75,34 @@
     }
 }
 
+.aside__hidden {
+    width: 0;
+    opacity: 0;
+}
+
+.aside__mobile {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 350px !important;
+}
+
 // |  MEDIA QUERIES |
 
 @media(max-width: 900px) {
     .aside__ {
         width: 0;
-        // z-index: 5;
-        // position: absolute;
-        // top: 0;
-        // left: 0;
+    }
+}
+
+@media(max-width: 375px) {
+    .aside__ .aside__content .action__icon {
+        @include display__flex;
+    }
+
+    .aside__mobile {
+        width: 100% !important;
     }
 }

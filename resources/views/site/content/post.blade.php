@@ -1,7 +1,7 @@
 @extends('site.layout')
 
 @section('content')
-    <div class="container">
+    <div class="container__">
         <article class="article__">
             <div class="post__">
                 <div class="post__category"> Categoria </div>
@@ -15,10 +15,10 @@
                 </div>
 
                 <div class="post__content">
-                    {!! $post->text!!}
+                    {!! $post->text !!}
                 </div>
 
-                <a class="button__solid" > Author: {{ $post->author->name }} </a>
+                <span class=""> Author: {{ $post->author->name }} </span>
             </div>
         </article>
     </div>

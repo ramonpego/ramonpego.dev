@@ -5,9 +5,21 @@
     height: 70px;
     padding: 0;
     border-bottom: 0.063rem solid $border;
+    @include display__flex;
+    @include align__items(center);
+    @include justify__content(between);
+
+    .navbar__brand {
+        @include display__flex;
+        @include align__items(center);
+        @include justify__content(center);
+    }
 
     .navbar__menu {
+        list-style: none;
         height: 70px;
+        @include display__flex;
+        @include align__items(center);
 
         .navbar__item {
             height: inherit;
@@ -15,8 +27,7 @@
             .navbar__link {
                 cursor: pointer;
                 height: inherit;
-                padding-left: 1.25rem;
-                padding-right: 1.25rem;
+                padding: 0 1.25rem;
                 border-bottom: 0.063rem solid transparent;
                 color: $black;
                 @include display__flex;
@@ -27,7 +38,8 @@
                     border-bottom: 0.063rem solid $color;
                 }
 
-                &.sidebar__action {
+                &.sidebar__action,
+                &.sidebar__action__mobile {
                     .line__icon {
                         position: relative;
                         width: 1.875rem;
@@ -55,6 +67,10 @@
                         }
                     }
                 }
+
+                &.sidebar__action__mobile {
+                    display: none;
+                }
             }
         }
     }
@@ -64,6 +80,24 @@
 
 @media(max-width: 900px) {
     .navbar__ {
-        padding: 0 2rem;
+        .navbar__menu .navbar__item .navbar__link {
+            &.sidebar__action {
+                display: none;
+            }
+
+            &.sidebar__action__mobile {
+                @include display__flex;
+            }
+        }
+    }
+}
+
+@media(max-width: 425px) {
+    .navbar__ {
+        @include justify__content(end);
+
+        .navbar__brand {
+            display: none;
+        }
     }
 }
