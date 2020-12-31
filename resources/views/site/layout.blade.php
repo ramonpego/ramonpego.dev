@@ -31,7 +31,7 @@
         <link type="text/css" rel="stylesheet" href="{{ asset('css/site.css') }}">
     </head>
 
-    <body class="body__">
+    <body class="body__ dark__mode">
         <div class="loader__content">
             <div class="loader__ loader__rounded"></div>
         </div>

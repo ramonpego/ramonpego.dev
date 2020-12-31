@@ -14,7 +14,7 @@
                     <h2 class="title"> {{ $post->title }} </h2>
                 </div>
 
-                <div class="post__content">
+                <div class="post__content text">
                     {!! $post->text !!}
                 </div>
 

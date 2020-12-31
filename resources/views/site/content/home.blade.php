@@ -11,7 +11,7 @@
                         <span class="text_small"> {{ $post->created_at->diffForHumans() }} </span>
                     </div>
 
-                    <div class="post__header">
+                    <div class="post__header text">
                         <h2 class="title"> {{ $post->title }} </h2>
                         {!! $post->description !!}
                     </div>

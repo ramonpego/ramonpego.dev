@@ -629,7 +629,7 @@ textarea.form-control {
   width: 7.5rem;
   height: 2.5rem;
   background-color: #FF4655;
-  color: #24292E;
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1045,5 +1045,112 @@ textarea.form-control {
     align-items: center;
     justify-content: center;
   }
+}
+
+.body__.dark__mode {
+  background-color: #24292E;
+}
+
+.body__.dark__mode .aside__ {
+  background-color: #24292E;
+}
+
+.body__.dark__mode .aside__ .aside__content {
+  border-right-color: #1E2226;
+}
+
+.body__.dark__mode .aside__ .aside__content .aside__header {
+  background-color: #1E2226;
+}
+
+.body__.dark__mode .aside__ .aside__content .aside__header .aside__img {
+  border-color: #1E2226;
+  background-color: #1E2226;
+}
+
+.body__.dark__mode .navbar__ {
+  border-bottom-color: #1E2226;
+}
+
+.body__.dark__mode .navbar__ .navbar__brand {
+  color: #FFFFFF;
+}
+
+.body__.dark__mode .navbar__ .navbar__menu .navbar__item .navbar__link {
+  color: #FFFFFF;
+}
+
+.body__.dark__mode .navbar__ .navbar__menu .navbar__item .navbar__link.sidebar__action .line__icon,
+.body__.dark__mode .navbar__ .navbar__menu .navbar__item .navbar__link.sidebar__action__mobile .line__icon {
+  background-color: #FFFFFF;
+}
+
+.body__.dark__mode .navbar__ .navbar__menu .navbar__item .navbar__link.sidebar__action .line__icon::before,
+.body__.dark__mode .navbar__ .navbar__menu .navbar__item .navbar__link.sidebar__action .line__icon::after,
+.body__.dark__mode .navbar__ .navbar__menu .navbar__item .navbar__link.sidebar__action__mobile .line__icon::before,
+.body__.dark__mode .navbar__ .navbar__menu .navbar__item .navbar__link.sidebar__action__mobile .line__icon::after {
+  background-color: #FFFFFF;
+}
+
+.body__.dark__mode .footer__ {
+  border-top-color: #1E2226;
+}
+
+.body__.dark__mode .pagination .page-item .page-link {
+  border-color: #1E2226;
+}
+
+.body__.dark__mode .article__ {
+  border-color: #1E2226;
+  background-color: #1E2226;
+}
+
+.body__.dark__mode .article__ .post__ .post__info {
+  border-color: #24292E;
+}
+
+.body__.dark__mode .article__ .post__ .post__content {
+  background-color: #24292E;
+}
+
+.body__.dark__mode .article__ .post__ .post__action.button__solid {
+  border-color: #24292E;
+}
+
+.body__.dark__mode .social__ .social__nav .social__item .social__link {
+  background-color: #1E2226;
+}
+
+.body__.dark__mode .list__ .list__item {
+  color: #FFFFFF;
+}
+
+.body__.dark__mode label {
+  color: #FFFFFF;
+}
+
+.body__.dark__mode .form-control {
+  color: #FFFFFF;
+  border-color: #1E2226;
+}
+
+.body__.dark__mode .button__solid {
+  background-color: #1E2226;
+}
+
+.body__.dark__mode .button__solid:hover {
+  color: #FFFFFF;
+  background-color: #FF4655;
+}
+
+.body__.dark__mode .title,
+.body__.dark__mode .subtitle,
+.body__.dark__mode .text,
+.body__.dark__mode .text_small {
+  color: #FFFFFF;
+}
+
+.body__.dark__mode .div__title .subtitle {
+  color: #FFFFFF;
 }
 

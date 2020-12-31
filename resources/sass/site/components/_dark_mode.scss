@@ -1,0 +1,136 @@
+// | MODO DARK |
+
+.body__.dark__mode {
+    background-color: $black;
+
+    // SIDEBAR
+    .aside__ {
+        background-color: $black;
+
+        .aside__content {
+            border-right-color: $black2;
+
+            .aside__header {
+                background-color: $black2;
+
+                .aside__img {
+                    border-color: $black2;
+                    background-color: $black2;
+                }
+            }
+        }
+    }
+
+    // NAVBAR
+    .navbar__ {
+        border-bottom-color: $black2;
+
+        .navbar__brand {
+            color: $white;
+        }
+
+        .navbar__menu {
+            .navbar__item {
+                .navbar__link {
+                    color: $white;
+
+                    &.sidebar__action,
+                    &.sidebar__action__mobile {
+                        .line__icon {
+                            background-color: $white;
+
+                            &::before, &::after {
+                                background-color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // FOOTER
+    .footer__ {
+        border-top-color: $black2;
+    }
+
+    // PAGINATE
+    .pagination {
+        .page-item {
+            .page-link {
+                border-color: $black2;
+            }
+        }
+    }
+
+    // ARTICLE
+    .article__ {
+        border-color: $black2;
+        background-color: $black2;
+
+        .post__ {
+            .post__info {
+                border-color: $black;
+            }
+
+            .post__content {
+                background-color: $black;
+            }
+
+            .post__action.button__solid {
+                border-color: $black;
+            }
+        }
+    }
+
+    // LISTS
+    .social__ {
+        .social__nav {
+            .social__item {
+                .social__link {
+                    background-color: $black2;
+                }
+            }
+        }
+    }
+
+    .list__ {
+        .list__item {
+            color: $white;
+        }
+    }
+
+    // FORMS
+    label {
+        color: $white;
+    }
+
+    .form-control {
+        color: $white;
+        border-color: $black2;
+    }
+
+    // BUTTONS
+    .button__solid {
+        background-color: $black2;
+
+        &:hover {
+            color: $white;
+            background-color: $color;
+        }
+    }
+
+    // TYPOGRAPHY
+    .title,
+    .subtitle,
+    .text,
+    .text_small {
+        color: $white;
+    }
+
+    .div__title {
+        .subtitle {
+            color: $white;
+        }
+    }
+}
