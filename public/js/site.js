@@ -104,8 +104,8 @@ var sidebarClose = document.querySelector('.sidebar__close');
 var darkMode = document.querySelector('.dark__mode'); // | EVENTS |
 
 window.addEventListener('load', loading__);
-sidebarAction.addEventListener('click', sidebar__toglle);
-sidebarActionMobile.addEventListener('click', sidebar__mobile);
+sidebarAction.addEventListener('click', sidebar__toggle);
+sidebarActionMobile.addEventListener('click', sidebar__toggle__mobile);
 sidebarClose.addEventListener('click', sidebar__close);
 darkMode.addEventListener('click', dark__mode); // | FUNCITONS |
 
@@ -116,7 +116,7 @@ function loading__(event) {
   }, 1000);
 }
 
-function sidebar__toglle() {
+function sidebar__toggle() {
   if (sidebar.classList.contains('aside__hidden')) {
     sidebar.classList.remove('aside__hidden');
     main.classList.remove('main__full');
@@ -126,7 +126,7 @@ function sidebar__toglle() {
   }
 }
 
-function sidebar__mobile() {
+function sidebar__toggle__mobile() {
   if (sidebar.classList.contains('aside__mobile')) {
     sidebar.classList.remove('aside__mobile');
   } else {
